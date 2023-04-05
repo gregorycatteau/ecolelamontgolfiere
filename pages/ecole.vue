@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
-    <nuxt-img src="./fond.jpg" alt="notfound" class="imagefond" blur=""/>
+    <img src="./fond.jpg" alt="notfound" class="imagefond"/>
     <div class="postitle">
       <div class="overlay">
-        <nuxt-img 
+        <img 
         src="./logo2.png" 
-        width="1000"
+        class="imagelogo"
         />
       </div>
     </div>
@@ -31,6 +31,9 @@
 }
 .imagefond {
   @apply w-11/12 m-auto rounded-3xl h-auto backdrop-blur-0 sepia;
+}
+.imagelogo {
+  @apply w-[1000px] m-auto rounded-3xl h-auto;
 }
 .postitle {
   @apply absolute top-20 left-0 w-full h-full flex justify-center items-start;
