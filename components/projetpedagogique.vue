@@ -15,7 +15,7 @@
           <img
             v-for="(image, index) in sliderImages"
             :key="index"
-            :src="`@/public/slider${image}.jpg`"
+            :src="`/slider${image}.jpg`"
             class="slider-image"
             alt="Not found"
             :width="600"
@@ -32,6 +32,33 @@ import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'HomePage',
+  data() {
+    return {
+      sliderImages: [
+        {
+          id: 1,
+          src: '@/public/slider1.jpg',
+          name: 'slider1',
+          type: 'image',
+          required: true,
+        },
+        {
+          id: 2,
+          src: '@/public/slider2.jpg',
+          name: 'slider2',
+          type: 'image',
+          required: true,
+        },
+        {
+          id: 3,
+          src: '@/public/slider3.jpg',
+          name: 'slider3',
+          type: 'image',
+          required: true,
+        },
+      ],
+    }
+  },
   setup() {
     const sliderImages = ref([1, 2, 3]);
 

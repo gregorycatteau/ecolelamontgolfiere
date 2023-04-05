@@ -24,7 +24,7 @@
           <img
             v-for="(image, index) in sliderImages"
             :key="index"
-            :src="`@/public/slider${image}.jpg`"
+            :src="`/slider${image}.jpg`"
             class="slider-image"
             alt="Not found"
             :width="600"
@@ -35,7 +35,57 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
 
+export default defineComponent({
+  name: 'HomePage',
+  data() {
+    return {
+      sliderImages: [
+        {
+          id: 1,
+          src: '@/public/slider7.jpg',
+          name: 'slider7',
+          type: 'image',
+          required: true,
+        },
+        {
+          id: 2,
+          src: '@/public/slider8.jpg',
+          name: 'slider8',
+          type: 'image',
+          required: true,
+        },
+        {
+          id: 3,
+          src: '@/public/slider9.jpg',
+          name: 'slider9',
+          type: 'image',
+          required: true,
+        },
+      ],
+    }
+  },
+  setup() {
+    const sliderImages = ref([7, 8, 9]);
+
+    const changeSlider = () => {
+  let currentImage = sliderImages.value.shift();
+  if (currentImage === undefined) {
+    currentImage = sliderImages.value[0];
+  }
+  sliderImages.value.push(currentImage === 9 ? 7 : currentImage + 1);
+};
+
+    setInterval(changeSlider, 3000);
+
+    return {
+      sliderImages,
+    };
+  },
+});
+</script>
 <style scoped>
   .maintitle {
     @apply text-4xl font-bold text-center my-10;
@@ -103,27 +153,3 @@
   }
 </style>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
-
-export default defineComponent({
-  name: 'HomePage',
-  setup() {
-    const sliderImages = ref([7, 8, 9]);
-
-    const changeSlider = () => {
-  let currentImage = sliderImages.value.shift();
-  if (currentImage === undefined) {
-    currentImage = sliderImages.value[0];
-  }
-  sliderImages.value.push(currentImage === 9 ? 7 : currentImage + 1);
-};
-
-    setInterval(changeSlider, 3000);
-
-    return {
-      sliderImages,
-    };
-  },
-});
-</script>
