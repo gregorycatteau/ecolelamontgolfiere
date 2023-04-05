@@ -27,7 +27,7 @@
 
 <style scoped>
 .wrapper {
-  @apply relative;
+  @apply relative mt-10;
 }
 .imagefond {
   @apply w-11/12 m-auto rounded-3xl h-auto backdrop-blur-0 sepia;

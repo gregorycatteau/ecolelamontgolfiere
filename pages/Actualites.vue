@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p class="title">Bienvenue sur la page actualité</p>
+    <h1 class="title">Bienvenue sur la page actualité</h1>
+    <h1>Agenda</h1>
   </div>
 </template>
 <script lang="ts">

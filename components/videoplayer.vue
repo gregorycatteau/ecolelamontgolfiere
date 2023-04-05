@@ -9,7 +9,6 @@
       frameborder="0" 
       allow=
         "accelerometer; 
-        autoplay;   
         clipboard-write; 
         encrypted-media; 
         gyroscope; 
@@ -17,7 +16,7 @@
       allowfullscreen
     >     
     </iframe>
-    <h1 class="title">Vidéo de présentation du modèle Sudbury</h1>
+    <h1 class="title">{{ title }}</h1>
   </div>
 </template>
 
@@ -30,10 +29,15 @@ export default {
     source: {
       type: String as PropType<string>,
       required: true
+    },
+    title: {
+      type: String as PropType<string>,
+      required: true
     }
   }
 }
 </script>
+
 
 <style scoped>
 .wrapper {

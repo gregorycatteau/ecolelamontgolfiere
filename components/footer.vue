@@ -1,19 +1,21 @@
 <template>
-  <div :class="{ dark: isDark }">
-    <nav class="nav">
-      <ul class="ul">
-        <li class="li">
-          <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
-        </li>
-        <li class="li">
+ <div class="footing">
+    <div :class="{ dark: isDark }">
+      <nav class="nav">
+        <ul class="ul">
+          <li class="li">
+            <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
+          </li>
+          <li class="li">
           <nuxt-link to="/ressources" class="link">Ressources</nuxt-link>
-        </li>
-        <li class="li">
-          <nuxt-link to="/contact" class="link">Contact</nuxt-link>
-        </li>
-      </ul>
-    </nav>
-    <slot />
+          </li>
+          <li class="li">
+            <nuxt-link to="/contact" class="link">Contact</nuxt-link>
+          </li>
+        </ul>
+      </nav>
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -36,7 +38,9 @@ export default {
 </script>
 
 <style scoped>
-
+.footing {
+  @apply bg-indigo-200;
+}
 .dark {
   @apply bg-gray-800 text-gray-100;
 }

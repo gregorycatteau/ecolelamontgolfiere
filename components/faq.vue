@@ -118,13 +118,13 @@ export default {
   @apply text-4xl font-bold text-center;
 }
 .wrapper {
-  @apply relative mt-10 flex flex-col bg-red-200 w-10/12 mx-auto cursor-pointer rounded-2xl;
+  @apply relative mt-10 flex flex-col bg-indigo-200 w-10/12 mx-auto cursor-pointer rounded-2xl;
 }
 .wrapperint {
   @apply relative mt-10;
 }
 .question {
-  @apply text-xl font-bold mt-0 mb-6 text-left;
+  @apply text-xl font-bold mt-0 mb-6 text-left text-gray-700;
 }
 .question2 {
   @apply text-2xl font-bold mt-0 mb-6 text-left ml-10;
@@ -139,7 +139,7 @@ export default {
   @apply text-6xl text-gray-700 mr-10;
 }
 .answerwrap {
-  @apply relative mt-10;
+  @apply relative mt-10 p-10;
 }
 .answer {
   @apply text-xl text-gray-700 text-justify indent-5;
