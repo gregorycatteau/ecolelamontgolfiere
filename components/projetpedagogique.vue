@@ -12,10 +12,10 @@
       </div>
       <div class="column">
         <div class="slider-container">
-          <nuxt-img
+          <img
             v-for="(image, index) in sliderImages"
             :key="index"
-            :src="`/slider${image}.jpg`"
+            :src="`@/public/slider${image}.jpg`"
             class="slider-image"
             alt="Not found"
             :width="600"
@@ -26,6 +26,31 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+
+export default defineComponent({
+  name: 'HomePage',
+  setup() {
+    const sliderImages = ref([1, 2, 3]);
+
+    const changeSlider = () => {
+  let currentImage = sliderImages.value.shift();
+  if (currentImage === undefined) {
+    currentImage = sliderImages.value[0];
+  }
+  sliderImages.value.push(currentImage === 3 ? 1 : currentImage + 1);
+};
+
+    setInterval(changeSlider, 3000);
+
+    return {
+      sliderImages,
+    };
+  },
+});
+</script>
 
 <style scoped>
   .maintitle {
@@ -85,30 +110,6 @@
   }
 </style>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
-
-export default defineComponent({
-  name: 'HomePage',
-  setup() {
-    const sliderImages = ref([1, 2, 3]);
-
-    const changeSlider = () => {
-  let currentImage = sliderImages.value.shift();
-  if (currentImage === undefined) {
-    currentImage = sliderImages.value[0];
-  }
-  sliderImages.value.push(currentImage === 3 ? 1 : currentImage + 1);
-};
-
-    setInterval(changeSlider, 3000);
-
-    return {
-      sliderImages,
-    };
-  },
-});
-</script>
 
 
 

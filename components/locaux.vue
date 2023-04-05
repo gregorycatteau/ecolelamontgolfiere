@@ -21,10 +21,10 @@
       </div>
       <div class="column">
         <div class="slider-container">
-          <nuxt-img
+          <img
             v-for="(image, index) in sliderImages"
             :key="index"
-            :src="`/slider${image}.jpg`"
+            :src="`@/public/slider${image}.jpg`"
             class="slider-image"
             alt="Not found"
             :width="600"
