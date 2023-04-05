@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <img src="./fond.jpg" alt="notfound" class="imagefond"/>
+    <img src="@/public/fond.jpg" alt="notfound" class="imagefond"/>
     <div class="postitle">
       <div class="overlay">
         <img 
-        src="./logo2.png" 
+        src="@/public/logo2.png" 
         class="imagelogo"
         />
       </div>
