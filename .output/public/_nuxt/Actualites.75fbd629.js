@@ -1,0 +1,1 @@
+import{k as t,l as a,o as s,$ as c,a0 as o,a1 as _}from"./entry.b4d13894.js";const n={name:"actualites"};const p=e=>(c("data-v-2c89439b"),e=e(),o(),e),d=p(()=>_("p",{class:"title"},"Bienvenue sur la page actualité",-1)),l=[d];function i(e,r,u,f,v,h){return s(),a("div",null,l)}const x=t(n,[["render",i],["__scopeId","data-v-2c89439b"]]);export{x as default};

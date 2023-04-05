@@ -1,0 +1,1 @@
+import{k as s,l as t,o as a,$ as o,a0 as _,a1 as c}from"./entry.b4d13894.js";const n={name:"tarifs"};const p=e=>(o("data-v-2e207629"),e=e(),_(),e),r=p(()=>c("p",{class:"title"},"Bienvenue sur la page tarifs",-1)),d=[r];function i(e,l,f,u,v,h){return a(),t("div",null,d)}const $=s(n,[["render",i],["__scopeId","data-v-2e207629"]]);export{$ as default};

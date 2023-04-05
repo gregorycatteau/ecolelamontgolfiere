@@ -1,0 +1,1 @@
+import{k as e,l as n,o,a1 as s}from"./entry.b4d13894.js";const t={},c=s("p",null,"Bienvenue sur la home page",-1),a=[c];function r(_,l){return o(),n("div",null,a)}const i=e(t,[["render",r]]);export{i as default};
