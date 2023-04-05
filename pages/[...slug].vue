@@ -1,0 +1,6 @@
+<template>
+  <main >
+    <ContentDoc class="prose-headings:text-center prose-table:text-center prose-th:text-indigo-600 text-justify indent-10 mt-8 mx-auto prose-indigo prose md:prose-4xl lg:prose-xl prose-h1:text-5xl prose-h1:text-indigo-500"/>
+  </main>
+</template>
+<script></script>
