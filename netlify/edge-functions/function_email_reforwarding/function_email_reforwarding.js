@@ -1,11 +1,11 @@
-const sgMail = require('@sendgrid/mail')
+import { setApiKey, send } from '@sendgrid/mail'
 
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   const { data: contactData } = JSON.parse(event.body)
 
   const { nom, prenom, email, message } = contactData
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  setApiKey(process.env.SENDGRID_API_KEY)
 
   const msg = {
     to: 'association@ecolelamontgolfiere.fr',
@@ -21,7 +21,7 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    await sgMail.send(msg)
+    await send(msg)
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent' }),
