@@ -22,15 +22,18 @@
 </template>
 <style scoped>
 .wrapper {
-  @apply relative my-10 bg-blue-100 p-5 w-10/12 mx-auto;
+  @apply relative my-10 bg-red-600 p-5 w-10/12 mx-auto rounded-3xl z-10;
 }
 .intwrapper {
-  @apply flex flex-col justify-center items-center my-5 w-9/12 mx-auto;
+  @apply flex flex-col justify-center items-center my-5 w-9/12 mx-auto z-20;
 }
 .title {
-  @apply text-4xl font-bold text-center text-gray-700 mb-10;
+  @apply text-4xl font-bold text-center mb-10 text-green-300 opacity-100 z-50;
 }
 .text {
-  @apply text-xl text-center text-gray-700;
+  @apply text-xl text-center text-green-100;
+}
+.texte {
+  @apply text-2xl font-bold text-center text-green-600;
 }
 </style>

@@ -1,14 +1,12 @@
 <template>
-  <div class="wrapper">
-    <img src="@/public/fond.jpg" alt="notfound" class="imagefond"/>
-    <div class="postitle">
-      <div class="overlay">
-        <img 
-        src="@/public/logo2.png" 
-        class="imagelogo"
-        />
-      </div>
+    <div class="wrapperingall">
+    <Separator></Separator>
+    <div class="wrapperimg">
+      <img src="@/public/slider1.jpg" alt="notfound" class="imagefond"/>
     </div>
+     <Separator></Separator>
+    
+    <div class="suite">
     <Generalites></Generalites>
     <Separator></Separator>
     <valeurs></valeurs>
@@ -22,29 +20,29 @@
     <Sorties></Sorties>
     <Separator></Separator>
     <Faq></Faq>
+    <Separator></Separator>
+    <Togglingbutton></Togglingbutton>
+  
   </div>
+</div>
 </template>
 
 <style scoped>
-.wrapper {
-  @apply relative mt-10;
+
+.wrapperingall {
+  @apply w-full h-full bg-white bg-cover bg-center bg-no-repeat;
 }
+
+.wrapperimg {
+  @apply w-11/12 m-auto aspect-w-16 aspect-h-9 ;
+}
+
 .imagefond {
-  @apply w-11/12 m-auto rounded-3xl h-auto backdrop-blur-0 sepia;
+  @apply max-w-full h-auto object-cover z-10  rounded-b-full mt-10;
 }
-.imagelogo {
-  @apply w-[1000px] m-auto rounded-3xl h-auto;
-}
-.postitle {
-  @apply absolute top-20 left-0 w-full h-full flex justify-center items-start;
-}
-.overlay {
-  @apply  bg-zinc-400 bg-opacity-70 rounded-lg p-8 text-center;
-}
-.title {
-  @apply text-7xl text-gray-900 font-bold mb-8;
-}
-.subtitle {
-  @apply text-5xl text-gray-900 font-bold;
+
+
+.suite {
+  @apply mt-80;
 }
 </style>

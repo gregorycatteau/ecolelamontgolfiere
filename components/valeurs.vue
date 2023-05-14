@@ -30,28 +30,31 @@ Ainsi, adultes et enfants évoluent dans le même cadre, et travaillent ensemble
 </script>
 <style scoped>
 .wrapping {
-  @apply relative mt-5 mx-auto w-9/12;
+  @apply relative mt-5 mx-auto w-10/12;
 }
 .herowrapper {
   @apply flex justify-between gap-4;
 }
+.maintitle {
+  @apply text-4xl font-bold text-center my-10 text-orange-600;
+}
 .cardwrapper {
-  @apply flex flex-col items-center gap-4 border-2 border-gray-300 rounded-lg p-4;
+  @apply bg-orange-600 flex flex-col items-center gap-4 border-2 border-gray-300 rounded-3xl p-4;
 }
 .text {
-  @apply text-center;
+  @apply text-center text-green-100;
 }
 .iconed {
   @apply text-6xl;
 }
 .sectiontitle {
-  @apply text-2xl font-bold text-center;
+  @apply text-4xl font-bold text-center text-green-300;
 }
 
 .maintitle {
   @apply text-4xl font-bold text-center my-10;
 }
 .mainlink {
-  @apply text-2xl font-bold text-center text-blue-700 my-10;
+  @apply text-2xl font-bold text-center text-orange-600 hover:text-green-300 my-10 cursor-pointer;
 }
 </style>

@@ -13,7 +13,7 @@ Chacun, enfant comme adulte, devrait aussi jouir d’une part égale du pouvoir 
 </template>
 <style scoped>
 .wrapper {
-  @apply  w-11/12 m-auto items-center flex flex-col justify-center p-10 mt-10;
+  @apply  w-11/12 m-auto items-center flex flex-col justify-center p-10 mt-10 bg-yellow-400;
 }
 .image {
   @apply w-1/2 m-auto rounded-3xl h-auto;

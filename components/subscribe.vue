@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="subwrapper">
       <h1 class="title">Notre processus d'inscription</h1>
-      <p class="text">Avant d’entamer un processus d'admission, nous vous encourageons à en apprendre autant que possible sur notre pédagogie et notre philosophie.</p>
+      <p class="text">Avant d’entamer un processus d'admission, nous vous encourageons à en apprendre autant que possible sur <span><nuxt-link to="/projetpedagogique2" class="link">notre pédagogie</nuxt-link></span> et notre philosophie.</p>
       <p class="text">Vous pouvez consulter notre site internet, nous rencontrer lors d’une réunion d’information ou d’une visite de l’école, ou encore nous contacter par téléphone ou par mail.</p>
       <p class="text">Nous vous invitons également à regarder ces multiples ressources à lire et à visionner pour nourrir votre réflexion.</p>
     </div>
@@ -133,13 +133,8 @@
           :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
         />
         
-        <button  
-        class="bouton"
-        :disabled="state.loading"
-        >
-        {{ state.loading ? "Envoi en cours..." : "Soumettre"}}
-          
-        </button>
+        <button class="bouton">
+        soumettre</button>
       </template>
     
    
@@ -203,7 +198,7 @@ async function handleSubmit(data) {
 }
 .bouton {
   @apply 
-  w-2/12 left-10 mt-10 mb-10 p-4 bg-indigo-800 rounded-3xl text-white text-xl font-bold text-center;
+  bg-indigo-800 text-white text-3xl p-5 rounded-3xl;
 }
 .form {
   @apply 

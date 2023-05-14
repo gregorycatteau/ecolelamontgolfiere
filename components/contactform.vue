@@ -44,8 +44,8 @@
     
     name="message"
     placeholder="par exemple: Je vous contacte pour vous dire que votre site est super ! On le savait déjà mais c'est toujours bon à entendre !"
-    validation="required |alpha | lenght, 2, 1000"
-    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
+    validation="required |alpha | lenght:2,1000"
+    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', lenght:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
     />
     <button :disabled="state.loading" class="bouton">
       {{ state.loading ? "Envoi en cours..." : "Soumettre"}}
@@ -58,6 +58,9 @@
 </template>
 
 <script setup>
+const supabase = useSupabaseClient()
+
+
 const formData = ref({
   nom: '',
   prénom: '',
@@ -65,7 +68,19 @@ const formData = ref({
   message: '',
 })
 async function handleSubmit(data) {
-  await wait(3000)
+  const { data: contact, error } = await supabase
+  .from('contact_table')
+  .insert({ nom: data.nom, prénom: data.prénom, email: data.email, message: data.message })
+
+  if (error) {
+    console.log(error)
+  } else {
+    console.log(contact)
+    formData.value.nom = ''
+    formData.value.prénom = ''
+    formData.value.email = ''
+    formData.value.message = ''
+  }
 }
 
 </script>

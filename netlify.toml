@@ -1,0 +1,5 @@
+
+
+[[edge_functions]]
+function = "function_email_reforwarding"
+path = "/api/function_email-reforwarding"
