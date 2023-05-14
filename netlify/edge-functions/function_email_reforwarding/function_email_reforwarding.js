@@ -1,16 +1,16 @@
-import { setApiKey, send } from '@sendgrid/mail'
+import sendEmail from '@/utils/sendEmail'
 
-export async function handler(event, context) {
-  const { data: contactData } = JSON.parse(event.body)
+exports.handler = async (event, context) => {
+  const { data: contactData } = JSON.parse(event.body);
 
-  const { nom, prenom, email, message } = contactData
+  const { nom, prenom, email, message } = contactData;
 
-  setApiKey(process.env.SENDGRID_API_KEY)
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
-    to: 'association@ecolelamontgolfiere.fr',
-    from: 'association@ecolelamontgolfiere.fr',
-    subject: 'Nouvelle demande de renseignement',
+    to: "association@ecolelamontgolfiere.fr",
+    from: "association@ecolelamontgolfiere.fr",
+    subject: "Nouvelle demande de renseignement",
     html: `
       <p>Une nouvelle demande de renseignement a été faite sur le site de l'école de la montgolfière</p>
       <p>Le Nom de la personne est : ${nom}</p>
@@ -18,22 +18,22 @@ export async function handler(event, context) {
       <p>Son adresse mail est: <a href="mailto:${email}">${email}</a></p>
       <p>Son Message est le suivant : ${message}</p>
     `,
-  }
+  };
 
   try {
-    await send(msg)
+    await sgMail.send(msg);
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Email sent' }),
-    }
+      body: JSON.stringify({ message: "Email sent" }),
+    };
   } catch (error) {
-    console.error(error)
+    console.error(error);
     if (error.response) {
-      console.error(error.response.body)
+      console.error(error.response.body);
     }
     return {
       statusCode: 500,
       body: JSON.stringify({ message: error.message }),
-    }
+    };
   }
-}
+};
