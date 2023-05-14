@@ -1,4 +1,4 @@
-import sendEmail from './utils/sendEmail'
+import sendEmail from 'utils/sendEmail.js'
 
 exports.handler = async (event, context) => {
   const { data: contactData } = JSON.parse(event.body);
