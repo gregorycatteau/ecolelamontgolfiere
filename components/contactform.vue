@@ -60,6 +60,9 @@
 <script setup>
 import { ref } from 'vue';
 
+
+const supabase = useSupabaseClient();
+
 const formData = ref({
   nom: '',
   prénom: '',
@@ -68,17 +71,23 @@ const formData = ref({
 });
 
 async function handleSubmit(data) {
-  // ... votre code existant pour enregistrer les données dans Supabase ...
-
   const emailOptions = {
-    nom: data.nom,
-    prénom: data.prénom,
-    email: data.email,
-    message: data.message
+    from: '', // Adresse e-mail de l'expéditeur
+    to: '', // Adresse e-mail du destinataire
+    subject: '', // Sujet de l'e-mail
+    parameters: {
+      nom: data.nom,
+      prénom: data.prénom,
+      email: data.email,
+      message: data.message
+    }
   };
 
   try {
-    const response = await fetch('/.netlify/functions/contact', {
+    const response = await fetch(`${process.env.URL}/.netlify/functions/emails/contact`, {
+      headers: {
+        'netlify-emails-secret': process.env.NETLIFY_EMAILS_SECRET
+      },
       method: 'POST',
       body: JSON.stringify(emailOptions)
     });
@@ -89,15 +98,32 @@ async function handleSubmit(data) {
       formData.value.prénom = '';
       formData.value.email = '';
       formData.value.message = '';
+
+      // Enregistrement des données dans Supabase
+      const { data: contact, error } = await supabase
+        .from('contact_table')
+        .insert({
+          nom: data.nom,
+          prénom: data.prénom,
+          email: data.email,
+          message: data.message
+        });
+
+      if (error) {
+        console.error(error);
+      } else {
+        console.log(contact);
+      }
     } else {
       // Erreur lors de l'envoi de l'e-mail
-      console.error('Une erreur s\'est produite lors de l\'envoi de l\'e-mail');
+      console.error("Une erreur s'est produite lors de l'envoi de l'e-mail");
     }
   } catch (error) {
-    console.error('Une erreur s\'est produite lors de l\'envoi de l\'e-mail', error);
+    console.error("Une erreur s'est produite lors de l'envoi de l'e-mail ou de l'enregistrement des données", error);
   }
 }
 </script>
+
 
 
 

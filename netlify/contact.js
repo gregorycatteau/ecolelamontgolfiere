@@ -4,7 +4,7 @@ exports.handler = async function(event, context) {
   const { nom, prénom, email, message } = JSON.parse(event.body);
 
   const emailOptions = {
-    from: "", // Adresse e-mail de l'expéditeur
+    from: "association@ecolelamontgolfiere.fr", // Adresse e-mail de l'expéditeur
     to: "association@ecolelamontgolfiere.fr", // Adresse e-mail du destinataire
     subject: "Nouvelle demande de contact",
     parameters: {
