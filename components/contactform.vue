@@ -58,57 +58,47 @@
 </template>
 
 <script setup>
-import { sendEmail } from "@netlify/emails";
-
-const supabase = useSupabaseClient();
+import { ref } from 'vue';
 
 const formData = ref({
   nom: '',
   prénom: '',
   email: '',
-  message: '',
+  message: ''
 });
 
 async function handleSubmit(data) {
-  const { data: contact, error } = await supabase
-    .from('contact_table')
-    .insert({
-      nom: data.nom,
-      prénom: data.prénom,
-      email: data.email,
-      message: data.message,
+  // ... votre code existant pour enregistrer les données dans Supabase ...
+
+  const emailOptions = {
+    nom: data.nom,
+    prénom: data.prénom,
+    email: data.email,
+    message: data.message
+  };
+
+  try {
+    const response = await fetch('/.netlify/functions/contact', {
+      method: 'POST',
+      body: JSON.stringify(emailOptions)
     });
 
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(contact);
-
-    // Envoi de l'e-mail de notification
-    const template = "contact";
-    const parameters = {
-      nom: data.nom,
-      prénom: data.prénom,
-      email: data.email,
-      message: data.message
-    };
-
-    await sendEmail({
-      from: "association@ecolelamontgolfiere.fr",
-      to: "association@ecolelamontgolfiere.fr",
-      subject: "Nouvelle demande de contact",
-      template: template,
-      parameters: parameters,
-    });
-
-    // Réinitialisation du formulaire après l'envoi
-    formData.value.nom = '';
-    formData.value.prénom = '';
-    formData.value.email = '';
-    formData.value.message = '';
+    if (response.ok) {
+      // Succès de l'envoi de l'e-mail
+      formData.value.nom = '';
+      formData.value.prénom = '';
+      formData.value.email = '';
+      formData.value.message = '';
+    } else {
+      // Erreur lors de l'envoi de l'e-mail
+      console.error('Une erreur s\'est produite lors de l\'envoi de l\'e-mail');
+    }
+  } catch (error) {
+    console.error('Une erreur s\'est produite lors de l\'envoi de l\'e-mail', error);
   }
 }
 </script>
+
 
 
 
