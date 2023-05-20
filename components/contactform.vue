@@ -58,6 +58,7 @@
 </template>
 
 <script setup>
+const supabase = useSupabaseClient()
 import { ref } from 'vue';
 const formData = ref({
   nom: '',
