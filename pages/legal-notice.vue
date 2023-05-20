@@ -2,6 +2,11 @@
   <div>
     <p class="title">Bienvenue sur la page mentions légales</p>
   </div>
+  <div class="temp">[[plugins]]
+  package = "@netlify/plugin-emails"
+
+[dev]
+  command = "npm run dev"</div>
 </template>
 <script lang="ts">
 export default {

@@ -118,13 +118,13 @@ export default {
   @apply text-4xl font-bold text-center;
 }
 .wrapper {
-  @apply relative mt-10 flex flex-col bg-red-200 w-10/12 mx-auto cursor-pointer rounded-2xl;
+  @apply relative mt-10 flex flex-col bg-purple-900 w-10/12 mx-auto cursor-pointer rounded-2xl;
 }
 .wrapperint {
   @apply relative mt-10;
 }
 .question {
-  @apply text-xl font-bold mt-0 mb-6 text-left;
+  @apply text-xl font-bold mt-0 mb-6 text-left text-slate-50;
 }
 .question2 {
   @apply text-2xl font-bold mt-0 mb-6 text-left ml-10;
@@ -136,12 +136,12 @@ export default {
   @apply flex justify-center items-center;
 }
 .icon {
-  @apply text-6xl text-gray-700 mr-10;
+  @apply text-6xl text-slate-50 mr-10;
 }
 .answerwrap {
-  @apply relative mt-10;
+  @apply relative mt-10 p-10;
 }
 .answer {
-  @apply text-xl text-gray-700 text-justify indent-5;
+  @apply text-xl text-slate-50 text-justify indent-5;
 }
 </style>
