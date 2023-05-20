@@ -27,7 +27,7 @@
         </ol>
         <h2 class="reasons">Comment adhérer ?</h2>
         <p class="text">
-          Pour adhérer à l'association, il suffit de remplir le formulaire ci-dessous et de nous envoyer un chèque de 20€ à l'ordre de l'association "La Montgolfière"
+          Pour adhérer à l'association, il suffit de remplir le formulaire ci-dessous et de nous envoyer un chèque de 10€ à l'ordre de l'association "La Montgolfière"
         </p>
       </div>
       </div>

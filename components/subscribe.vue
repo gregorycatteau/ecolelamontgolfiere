@@ -8,7 +8,7 @@
     </div>
     <div class="subwrapper">
       <h2 class="soustitre">Critères d'admission</h2>
-      <P class="text">L’école accueille des enfants et adolescents de 5 à 18 ans. Ils peuvent intégrer l’école à tout moment de l’année, à condition qu'il reste de la place.</P>
+      <P class="text">L’école accueille des enfants et adolescents de 2 à 16 ans. Ils peuvent intégrer l’école à tout moment de l’année, à condition qu'il reste de la place.</P>
       <P class="text">L’admission définitive d’un nouveau membre dans notre école dépendra également de son niveau d’autonomie et de son aptitude à respecter notre règlement intérieur.</P>
     </div>
     <div class="subwrapper">

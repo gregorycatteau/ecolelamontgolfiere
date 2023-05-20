@@ -5,10 +5,16 @@
     </div>
     <div class="columns">
       <div class="column1">
-        <h1 class="title">Les enfants au coeur de leurs apprentissages</h1>
-        <p class="text">Dans le prolongement des travaux d’Adolphe Ferrière, de Célestin Freinet et Bernard Collot, notre projet pédagogique à partir de la rentrée 2023-2024,  s’inspire des pédagogies actives et coopératives tout en prônant la dimension systémique des apprentissages. </p>
-        <p class="text">Nous soutenons en effet,  que lorsque le jeune se met en mouvement pour accomplir une action qui a du sens pour lui, il enclenche un processus de recherche de solutions et acquiert les apprentissages nécessaires en mobilisant les ressources pédagogiques matérielles et humaines prévues à cet effet.</p>
-        <p class="text">La démarche de l’équipe pédagogique prend sa source dans les spécificités et le vécu des membres scolarisés en soutenant leur curiosité, leur jugement, leur raisonnement et leur esprit d’observation multipliant ainsi le potentiel de progression de chacun d’entre eux et leur permettant d’être pleinement acteurs de leurs apprentissages.. </p>
+        <h1 class="title">Le Vivre Ensemble</h1>
+        <p class="text">Par vivre-ensemble nous entendons la coopération, la solidarité, le partage, la paix, ...
+
+Cet apprentissage du "vivre-ensemble" regroupe notamment les compétences psychosociales suivantes : écoute, confiance en soi, connaissance et respect de soi, respect de l'autre, empathie, capacité à coopérer, familiarisation à la gestion de conflits, recours à l'intelligence émotionnelle...
+
+Pour favoriser le développement de ces compétences, les pratiques se centrent autour du fonctionnement multi-âges, de l'auto-organisation, de la coopération, de l'accompagnement des émotions et de la conscience de soi.
+
+Ces pratiques se mettent notamment en place dans le cadre des règles de vie qui sont élaborées en concertation avec le groupe d'enfants et l'ensemble de la communauté pédagogique, sur des temps dédiés. Elles peuvent être amenées à évoluer en fonction des besoins rencontrés au quotidien.
+
+Elles ont pour but de proposer un cadre sécurisant et indispensable, à l'intérieur duquel chacun, enfant comme adulte, se sent libre d'agir et de penser dans le respect des autres.</p>
       </div>
       <div class="column2">
         <div class="slider-container">

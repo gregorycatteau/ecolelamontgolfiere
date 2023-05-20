@@ -21,7 +21,7 @@
       <div class="column2">
         <p class="text">L’école s’appuie sur un environnement suffisamment riche et stimulant qui permet à chacun de ses membres de satisfaire ses envies et ses besoins naturels d’apprendre.</p>
         <h1 class="title">Un collectif multi âges</h1>
-        <p class="text">L’un des fondements de notre approche est le décloisonnement des classes d’âges. Dans notre école, les membres entre 5 et 99 ans (une quarantaine de membre scolarisés et entre 4 et 6 adultes présents au quotidien) partagent le même espace. Cela multiplie les interactions possibles, sources précieuses d’apprentissages.</p>
+        <p class="text">L'école est le lieu de vie des enfants et des adultes qui les accompagnent. Si nous souhaitons que nos enfants fassent preuve d'initiatives, s'engagent et se responsabilisent à différents endroits de leur vie, il est intéressant de leur laisser de réelles opportunités d'agir sur leur monde : ici, organiser leur vie à l'école.</p>
         <p class="text">C'est un groupe vertueux qui se crée. Dans ce cadre protecteur, les plus jeunes peuvent apprendre des plus grands et vice versa.</p>
       </div>
     </div>

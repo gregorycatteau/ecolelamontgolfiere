@@ -5,9 +5,8 @@
     </div>
        <div class="columns">
       <div class="column1">
-          <p class="text">Les murs de cette école sont perméables, car l'on y vit aussi bien en dedans qu'au dehors. Cette école, qui abrite un écosystème vivant et dynamique, est nichée au cœur d'un autre écosystème tout aussi vivant et dynamique. Chacun peut, autant qu'il le désire, utiliser ce que la ville environnante lui offre, comme autant de richesses. </p>
+          <p class="text">Les murs de cette école sont perméables, car l'on y vit aussi bien en dedans qu'au dehors. </p>
           <h1 class="title">A chaque âge ses sorties</h1>
-          <p class="text">Les ados qui ont l’autorisation parentale de sortir seuls peuvent le faire quand ils le veulent en prévenant de leur sortie et en respectant les consignes de sécurité.Ceux qui ont besoin d’être accompagnés par un adulte peuvent également sortir en sollicitant l’équipe.</p>
           <p class="text">Souvent, une sortie initiée par un ou quelques membres est proposée à l’ensemble du collectif. Nous sortons ainsi très régulièrement, que ce soit simplement pour jouer à l’air libre dans les parcs alentours, sur un terrain de sport, à la piscine, à la patinoire, pour jardiner au jardin partagé, pour visiter un musée…</p>
         
     </div>

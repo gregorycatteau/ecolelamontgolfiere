@@ -1,19 +1,13 @@
 <template>
   <div class="wrapper">
     <div class="intwrapper">
-      <h2 class="title">La montgolfière est un établissement scolaire situé dans le médoc</h2>
-      <p class="text">Nous proposons un modèle éducatif libéré des programmes scolaires prédéfinis.</p>
-      <p class="text">Les enfants sont libres de choisir leurs activités et de s'investir dans des projets qui les intéressent.</p>
-    <p class="text">Nous accueillons les enfants de 3 à 16 ans</p>
+      <h2 class="title">La montgolfière est un établissement scolaire situé dans le nord médoc</h2>
+      <p class="text">L'école a pour but d'avoir une structure éducative adaptée à chaque enfant avec comme valeur première </p>
+      <p class="text">de le valoriser et l'encourager tout en le guidant à identifier et comprendre ses émotions.</p>
+    <p class="text">Nous accueillons les enfants de 2 à 16 ans</p>
 
     </div>
-    <div class="intwrapper">
-      <h1 class="title">Une école où les enfants sont libres et responsables.</h1>
-      <p class="text">Nous souhaitons favoriser l’autonomie et la responsabilité, valoriser le partage et la coopération, donner confiance en soi et faciliter le développement de compétences transversales indispensables à tout adulte épanoui. L’École Démocratique de Paris se veut être un lieu d’épanouissement dans lequel l’expérience individuelle et le vivre ensemble sont privilégiés. 
-
-</p>
-      
-    </div>
+    
     
   </div>
   <div class="intwrapper">

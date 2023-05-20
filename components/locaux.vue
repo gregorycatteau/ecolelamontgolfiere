@@ -6,7 +6,7 @@
     <div class="columns">
       <div class="column1">
         
-        <p class="textlist">Les locaux de l’école ne ressemblent pas à une école classique. La Montgolfière ressemble en fait à une grande maison, on y trouve : </p>
+        <p class="textlist">Les locaux que nous recherchons ne ressemblent pas à une école classique. La Montgolfière ressemblera à une grande maison, on y trouvera : </p>
         <ul class="listwrap">
           <li class="listitem">une salle très calme : on ne peut pas y parler, elle est utile pour travailler seul où se reposer</li>
           <li class="listitem">une salle calme : on peut parler doucement, on peut ainsi y travailler à plusieurs</li>
