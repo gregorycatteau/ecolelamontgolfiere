@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper"></div>
-  <nuxt-img 
-  src="./slider3.jpg" 
+  <img 
+  src="@/public/slider3.jpg" 
   alt="notfound" 
   class="imagefond"
   height="400"

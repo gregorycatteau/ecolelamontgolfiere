@@ -4,18 +4,24 @@
       <h1 class="maintitle">Notre projet pédagogique</h1>
     </div>
     <div class="columns">
-      <div class="column">
-        <h1 class="title">Les enfants au coeur de leurs apprentissages</h1>
-        <p class="text">Dans le prolongement des travaux d’Adolphe Ferrière, de Célestin Freinet et Bernard Collot, notre projet pédagogique à partir de la rentrée 2023-2024,  s’inspire des pédagogies actives et coopératives tout en prônant la dimension systémique des apprentissages. </p>
-        <p class="text">Nous soutenons en effet,  que lorsque le jeune se met en mouvement pour accomplir une action qui a du sens pour lui, il enclenche un processus de recherche de solutions et acquiert les apprentissages nécessaires en mobilisant les ressources pédagogiques matérielles et humaines prévues à cet effet.</p>
-        <p class="text">a démarche de l’équipe pédagogique prend sa source dans les spécificités et le vécu des membres scolarisés en soutenant leur curiosité, leur jugement, leur raisonnement et leur esprit d’observation multipliant ainsi le potentiel de progression de chacun d’entre eux et leur permettant d’être pleinement acteurs de leurs apprentissages.. </p>
+      <div class="column1">
+        <h1 class="title">Le Vivre Ensemble</h1>
+        <p class="text">Par vivre-ensemble nous entendons la coopération, la solidarité, le partage, la paix, ...
+
+Cet apprentissage du "vivre-ensemble" regroupe notamment les compétences psychosociales suivantes : écoute, confiance en soi, connaissance et respect de soi, respect de l'autre, empathie, capacité à coopérer, familiarisation à la gestion de conflits, recours à l'intelligence émotionnelle...
+
+Pour favoriser le développement de ces compétences, les pratiques se centrent autour du fonctionnement multi-âges, de l'auto-organisation, de la coopération, de l'accompagnement des émotions et de la conscience de soi.
+
+Ces pratiques se mettent notamment en place dans le cadre des règles de vie qui sont élaborées en concertation avec le groupe d'enfants et l'ensemble de la communauté pédagogique, sur des temps dédiés. Elles peuvent être amenées à évoluer en fonction des besoins rencontrés au quotidien.
+
+Elles ont pour but de proposer un cadre sécurisant et indispensable, à l'intérieur duquel chacun, enfant comme adulte, se sent libre d'agir et de penser dans le respect des autres.</p>
       </div>
-      <div class="column">
+      <div class="column2">
         <div class="slider-container">
           <img
             v-for="(image, index) in sliderImages"
             :key="index"
-            :src="`@/public/slider${image}.jpg`"
+            :src="`/slider${image}.jpg`"
             class="slider-image"
             alt="Not found"
             :width="600"
@@ -32,6 +38,33 @@ import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'HomePage',
+  data() {
+    return {
+      sliderImages: [
+        {
+          id: 1,
+          src: '@/public/slider1.jpg',
+          name: 'slider1',
+          type: 'image',
+          required: true,
+        },
+        {
+          id: 2,
+          src: '@/public/slider2.jpg',
+          name: 'slider2',
+          type: 'image',
+          required: true,
+        },
+        {
+          id: 3,
+          src: '@/public/slider3.jpg',
+          name: 'slider3',
+          type: 'image',
+          required: true,
+        },
+      ],
+    }
+  },
   setup() {
     const sliderImages = ref([1, 2, 3]);
 
@@ -52,63 +85,49 @@ export default defineComponent({
 });
 </script>
 
+
+
 <style scoped>
-  .maintitle {
-    @apply text-4xl font-bold text-center  my-10;
-  }
-  
-  .wrapper {
-    @apply relative ;
-  }
-  
-  .columns {
-    @apply flex justify-center gap-8 w-10/12 mx-auto;
-  }
-  
-  .column {
-    @apply flex flex-col justify-center items-center;
-  }
-  
-  .column:first-child {
-    @apply w-2/3 pr-10;
-  }
-  
-  .column:last-child {
-    @apply w-1/3 pl-10;
-  }
-  
-  .title {
-    @apply text-4xl font-bold mt-0 mb-6 text-center;
-  }
-  
-  .text {
-    @apply text-xl text-justify indent-5;
-  }
-  
-  .slider-container {
-    @apply relative w-full h-full overflow-hidden;
-  }
-  
-  .slider-image {
-    @apply absolute top-0 left-0 w-full h-full object-cover rounded-2xl transition-opacity duration-1000;
-  }
-  
-  .slider-image:not(:first-child) {
-    @apply opacity-0;
-  }
-  
-  .slider-image:nth-child(1) {
-    @apply z-40;
-  }
-  
-  .slider-image:nth-child(2) {
-    @apply z-20;
-  }
-  
-  .slider-image:nth-child(3) {
-    @apply z-10;
-  }
+.wrapper {
+  @apply w-10/12 m-auto p-10 rounded-s-3xl rounded-e-full prose sm:prose sm:max-w-none sm:prose-lg lg:prose-lg bg-yellow-300;
+}
+.maintitle {
+  @apply text-4xl font-bold text-center;
+}
+
+.columns {
+  @apply sm:flex sm:flex-row sm:w-11/12 sm:m-auto;
+}
+.column1 {
+  @apply sm:w-2/3 sm:px-5 md:w-1/2;
+}
+.column2 {
+  @apply sm:w-1/3 sm:px-5 md:w-1/2;
+}
+.maintitle {
+  @apply text-4xl font-bold text-center text-red-600;
+}
+.title {
+  @apply text-2xl font-bold text-center text-red-700;
+}
+.text {
+  @apply text-xl text-center p-5 text-red-800;
+}
+.textlist {
+  @apply text-xl text-center p-5;
+}
+.slider-container {
+  @apply flex  aspect-w-16 aspect-h-9 mx-10 rounded-2xl sm:aspect-w-6 sm:aspect-h-4;
+}
+.slider-image {
+  @apply w-full mx-auto object-cover rounded-2xl shadow-2xl;
+}
+
+
+
+
 </style>
+
 
 
 
