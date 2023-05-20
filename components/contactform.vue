@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { sendEmail, renderTemplate } from '@netlify/plugin-emails-core';
+import { sendEmail } from "@netlify/emails";
 
 const supabase = useSupabaseClient();
 
@@ -85,22 +85,21 @@ async function handleSubmit(data) {
     console.log(contact);
 
     // Envoi de l'e-mail de notification
-    const emailOptions = {
-      to: 'association@ecolelamontgolfiere.fr',
-      subject: 'Nouvelle demande de contact',
-      template: 'contact',
-      data: {
-        nom: data.nom,
-        prénom: data.prénom,
-        email: data.email,
-        message: data.message,
-      },
+    const template = "contact";
+    const parameters = {
+      nom: data.nom,
+      prénom: data.prénom,
+      email: data.email,
+      message: data.message
     };
 
-    const emailContent = await renderTemplate(emailOptions.template, emailOptions.data);
-    emailOptions.html = emailContent;
-
-    await sendEmail(emailOptions);
+    await sendEmail({
+      from: "association@ecolelamontgolfiere.fr",
+      to: "association@ecolelamontgolfiere.fr",
+      subject: "Nouvelle demande de contact",
+      template: template,
+      parameters: parameters,
+    });
 
     // Réinitialisation du formulaire après l'envoi
     formData.value.nom = '';
@@ -110,6 +109,7 @@ async function handleSubmit(data) {
   }
 }
 </script>
+
 
 
 
