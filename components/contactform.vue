@@ -58,32 +58,59 @@
 </template>
 
 <script setup>
-const supabase = useSupabaseClient()
+import { sendEmail, renderTemplate } from '@netlify/plugin-emails-core';
 
+const supabase = useSupabaseClient();
 
 const formData = ref({
   nom: '',
   prénom: '',
   email: '',
   message: '',
-})
+});
+
 async function handleSubmit(data) {
   const { data: contact, error } = await supabase
-  .from('contact_table')
-  .insert({ nom: data.nom, prénom: data.prénom, email: data.email, message: data.message })
+    .from('contact_table')
+    .insert({
+      nom: data.nom,
+      prénom: data.prénom,
+      email: data.email,
+      message: data.message,
+    });
 
   if (error) {
-    console.log(error)
+    console.log(error);
   } else {
-    console.log(contact)
-    formData.value.nom = ''
-    formData.value.prénom = ''
-    formData.value.email = ''
-    formData.value.message = ''
+    console.log(contact);
+
+    // Envoi de l'e-mail de notification
+    const emailOptions = {
+      to: 'association@ecolelamontgolfiere.fr',
+      subject: 'Nouvelle demande de contact',
+      template: 'contact',
+      data: {
+        nom: data.nom,
+        prénom: data.prénom,
+        email: data.email,
+        message: data.message,
+      },
+    };
+
+    const emailContent = await renderTemplate(emailOptions.template, emailOptions.data);
+    emailOptions.html = emailContent;
+
+    await sendEmail(emailOptions);
+
+    // Réinitialisation du formulaire après l'envoi
+    formData.value.nom = '';
+    formData.value.prénom = '';
+    formData.value.email = '';
+    formData.value.message = '';
   }
 }
-
 </script>
+
 
 
 <style scoped>
