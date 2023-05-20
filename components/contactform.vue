@@ -58,8 +58,8 @@
 </template>
 
 <script setup>
-const supabase = useSupabaseClient()
 import { ref } from 'vue';
+const supabase = useSupabaseClient();
 const formData = ref({
   nom: '',
   prénom: '',
@@ -68,27 +68,6 @@ const formData = ref({
 });
 
 async function handleSubmit(data) {
-  // Enregistrement dans Supabase
-  const { data: contact, error } = await supabase
-    .from('contact_table')
-    .insert({
-      nom: data.nom,
-      prénom: data.prénom,
-      email: data.email,
-      message: data.message
-    });
-
-  if (error) {
-    console.log(error);
-    return;
-  }
-
-  console.log(contact);
-  formData.value.nom = '';
-  formData.value.prénom = '';
-  formData.value.email = '';
-  formData.value.message = '';
-
   // Envoi de l'e-mail
   const emailOptions = {
     nom: data.nom,
@@ -98,13 +77,33 @@ async function handleSubmit(data) {
   };
 
   try {
-    const response = await fetch('https://www.ecolelamontgolfiere.fr/.netlify/functions/emails', {
+    const emailResponse = await fetch('https://www.ecolelamontgolfiere.fr/.netlify/functions/emails', {
       method: 'POST',
       body: JSON.stringify(emailOptions)
     });
 
-    if (response.ok) {
+    if (emailResponse.ok) {
       console.log('E-mail envoyé avec succès');
+      // Enregistrement dans Supabase uniquement si l'e-mail est envoyé avec succès
+      const { data: contact, error } = await supabase
+        .from('contact_table')
+        .insert({
+          nom: data.nom,
+          prénom: data.prénom,
+          email: data.email,
+          message: data.message
+        });
+
+      if (error) {
+        console.log(error);
+        return;
+      }
+
+      console.log(contact);
+      formData.value.nom = '';
+      formData.value.prénom = '';
+      formData.value.email = '';
+      formData.value.message = '';
     } else {
       console.error("Une erreur s'est produite lors de l'envoi de l'e-mail");
     }
