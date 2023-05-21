@@ -157,7 +157,7 @@ const formData = ref({
 })
 async function handleSubmit(data) {
   const { data: contact, error } = await supabase
-  .from('contact_table')
+  .from('table_pre_inscription')
   .insert({ nom: data.nom, prénom: data.prénom, email: data.email, message: data.message })
   if (error) {
     console.log(error)
