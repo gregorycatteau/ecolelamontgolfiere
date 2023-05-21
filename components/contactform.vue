@@ -110,6 +110,17 @@ async function handleSubmit(data) {
   } catch (error) {
     console.error("Une erreur s'est produite lors de l'envoi de l'e-mail", error);
   }
+  const { data: contact, error } = await supabase
+  .from('contact_table')
+  .insert({ nom: data.nom, prénom: data.prénom, email: data.email, message: data.message })
+  if (error) {
+    console.log(error)
+  } else {
+    console.log(contact)
+    formData.value.nom = ''
+    formData.value.prénom = ''
+    formData.value.email = ''
+    formData.value.message = ''
 }
 </script>
 
