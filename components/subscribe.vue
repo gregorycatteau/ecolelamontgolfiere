@@ -143,20 +143,37 @@
 </template>
 
 <script setup>
-import { prefix } from '@formkit/inputs';
-import { FormKit } from '@formkit/vue';
-
+const supabase = useSupabaseClient()
 const formData = ref({
   nom: '',
   prénom: '',
   email: '',
+  telephone: '',
+  nomenfant: '',
+  prenomenfant: '',
+  datenaissance: '',
+  dateadmission: '',
   message: '',
 })
 async function handleSubmit(data) {
-  await wait(3000)
+  const { data: contact, error } = await supabase
+  .from('contact_table')
+  .insert({ nom: data.nom, prénom: data.prénom, email: data.email, message: data.message })
+  if (error) {
+    console.log(error)
+  } else {
+    console.log(contact)
+    formData.value.nom = ''
+    formData.value.prénom = ''
+    formData.value.email = ''
+    formData.value.telephone = ''
+    formData.value.nomenfant = ''
+    formData.value.prenomenfant = ''
+    formData.value.datenaissance = ''
+    formData.value.dateadmission = ''
+    formData.value.message = ''
+  }
 }
-
-
 </script>
 
 <style scoped>
