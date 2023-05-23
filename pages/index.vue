@@ -11,6 +11,9 @@ Chacun, enfant comme adulte, devrait aussi jouir d’une part égale du pouvoir 
 </blockquote>
   </div>
 </template>
+<script lang="ts">
+
+</script>
 <style scoped>
 .wrapper {
   @apply  w-11/12 m-auto items-center flex flex-col justify-center p-10 mt-10 bg-yellow-400;

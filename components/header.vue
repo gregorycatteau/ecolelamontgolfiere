@@ -27,9 +27,6 @@
               <Icon name="mdi:bell-outline"></Icon>
             </div>
           </li>
-            
-          
-          
           <li class="li2">
             <div class="limodifier">
               <nuxt-link to="/actualites" class="link">Actualités</nuxt-link>
@@ -37,6 +34,17 @@
             </div>
           </li>
         </ul>
+        <div class="wrapperregistar">
+          <div>
+      <button v-if="user" @click="logout()">Deconnexion</button>
+    </div>
+    <div>
+      <NuxtLink v-if="!user" to="/connexion">Connexion</NuxtLink>
+    </div>
+    <div>
+      <NuxtLink v-if="!user" to="/register">Enregistrement</NuxtLink>
+    </div>
+        </div>
         <button class="toggle-btn" @click="toggleDark()">
           <span class="toggle-indicator">
             <icon v-if="isDark" name="openmoji:crescent-moon" />
@@ -56,6 +64,15 @@ const isDark = useDark()
 
 // const isDark = useDark()
 const toggleDark = useToggle(isDark)
+const client = useSupabaseAuthClient();
+const user = useSupabaseUser();
+const router = useRouter();
+
+async function logout() {
+  const { error } = await client.auth.signOut();
+  if (error) return;
+  await router.push('/connexion');
+  }
 </script>
 
 
@@ -117,6 +134,12 @@ button {
 }
 .dark .toggle-indicator {
   @apply transform translate-x-full;
+}
+.wrapperregistar {
+  @apply flex flex-col gap-4;
+}
+.btn {
+  @apply bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-center;
 }
 </style>
 

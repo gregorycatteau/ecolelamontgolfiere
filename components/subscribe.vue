@@ -54,8 +54,8 @@
           prefix-icon="avatarMan"
           name="nom"
           placeholder="par exemple: Dupont"
-          validation="required | length:2,100 | alpha "
-          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton nom...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
+          validation="required | length:2,100 | alpha_spaces "
+          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton nom...', alpha_spaces:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
           
         />
         <FormKit 
@@ -64,8 +64,8 @@
           prefix-icon="avatarMan"
           name="prénom"
           placeholder="par exemple: Jean"
-          validation="required | alpha | length:2,100"
-          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton prénom...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les prénoms sont généralement compris entre 2 et 100 caractères...'}"
+          validation="required | alpha_spaces | length:2,100"
+          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton prénom...', alpha_spaces:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les prénoms sont généralement compris entre 2 et 100 caractères...'}"
         />
         <FormKit 
           type="email"
@@ -80,7 +80,7 @@
           type="tel"
           label="Quel est ton numéro de téléphone ?"
           prefix-icon="telephone"
-          name="phone"
+          name="telephone"
           placeholder="par exemple: 06 12 34 56 78"
           validation="required |matches:/^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/"
           :validation-messages="{required:'Oups ! Je crois que tu as oublié ton numéro de téléphone...', number:'Il n\'\y a généralement pas de lettres dans un numéro de téléphone...',matches:'Ton numéro de téléphone ne semble pas valide...'}"
@@ -91,8 +91,8 @@
           prefix-icon="avatarMan"
           name="nomenfant"
           placeholder="par exemple: Dupont"
-          validation="required | length:2,100 | alpha "
-          :valdation-messages="{required:'Oups ! Je crois que tu as oublié le nom de ton enfant...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
+          validation="required | length:2,100 | alpha_spaces "
+          :valdation-messages="{required:'Oups ! Je crois que tu as oublié le nom de ton enfant...', alpha_spaces:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
         />
         <FormKit
           Type="text"
@@ -100,8 +100,8 @@
           prefix-icon="avatarMan"
           name="prenomenfant"
           placeholder="par exemple: Jacques"
-          validation="required | length:2,100 | alpha "
-          :valdation-messages="{required:'Oups ! Je crois que tu as oublié le prénom de ton enfant...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
+          validation="required | length:2,100 | alpha_spaces "
+          :valdation-messages="{required:'Oups ! Je crois que tu as oublié le prénom de ton enfant...', alpha_spaces:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
         />
         <FormKit
           Type="date"
@@ -109,8 +109,11 @@
           prefix-icon="avatarMan"
           name="datenaissance"
           placeholder="par exemple: 10/12/2017"
-          validation="required "
-          :valdation-messages="{required:'Oups ! Je crois que tu as oublié la date de naissance de ton enfant...'}"
+          validation="required | date_format:DD/MM/YYYY |date_before:today "
+          :valdation-messages="{
+            required:'Oups ! Je crois que tu as oublié la date de naissance de ton enfant...',
+            date_format:'Il semble que la date ne soit pas correcte...',
+            date_before:'Il n\'est pas possible de préinscrire les enfants par anticipation...'}"
         />
 
         <FormKit
@@ -119,8 +122,11 @@
           prefix-icon="time"
           name="dateadmission"
           placeholder="par exemple: 10/09/2024"
-          validation="required | date_after:today "
-          :valdation-messages="{required:'Oups ! C\'est important de savoir quand tu souhaites que ton enfant intègre l\'école...', date_after:'Il n\'est pas possible de préinscrire les enfants par anticipation...'}"
+          validation="required | date_format:DD/MM/YYYY |date_after:today "
+          :valdation-messages="{
+            required:'Oups ! C\'est important de savoir quand tu souhaites que ton enfant intègre l\'école...', 
+            date_format:'Il semble que la date ne soit pas correcte...',   
+            date_after:'Il n\'est pas possible de préinscrire les enfants par anticipation...'}"
         />
 
         <FormKit 
@@ -128,13 +134,16 @@
           label="As-tu d'autres informations à nous communiquer ?"
           name="message"
           prefix-icon="textarea"
-          placeholder="par exemple: Votre école est vraiment super (bon c'est un exemple...) !"
-          validation="required |alpha | lenght, 2, 1000"
-          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
+          placeholder="par exemple: Mon enfant a hâte de vous rejoindre !"
+          validation="required |alphanumeric | lenght, 2, 1000"
+          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...', alphanumeric:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
         />
         
-        <button class="bouton">
-        soumettre</button>
+        <button :disabled="state.loading" class="bouton">
+      {{ state.loading ? "Envoi en cours..." : "Soumettre"}}
+    </button>
+    <p v-if="state.error" class="text-red-500">
+      {{ state.error }}</p>
       </template>
     
    
