@@ -39,12 +39,12 @@
       </div>
       <div class="chapterwrapperbook">
       <a href="https://www.mamaeditions.com/catalogue/mutations/l-ecole-de-la-liberte">
-        <img src="@/public/ecoledelaliberte.png" alt="Daniel Greenberg
+        <img src="/ecoledelaliberte.png" alt="Daniel Greenberg
 L’École de la liberté
 Un modèle d'éducation autonome et démocratique">
       </a>
       <a href="https://www.decitre.fr/livres/libre-pour-apprendre-9782330068868.html">
-        <img src="@/public/librepourapprendre.jpeg" alt="Le best seller de Peter Gray ">
+        <img src="/librepourapprendre.jpeg" alt="Le best seller de Peter Gray ">
       </a>
 
     </div>

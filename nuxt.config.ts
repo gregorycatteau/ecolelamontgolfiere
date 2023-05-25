@@ -13,7 +13,9 @@ export default defineNuxtConfig({
     '@nuxt/image-edge', 
     '@formkit/nuxt', 
     'nuxt-icon', 
-    '@nuxtjs/supabase'],
+    '@nuxtjs/supabase',
+    
+  ],
     
   
 

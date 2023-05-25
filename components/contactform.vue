@@ -17,8 +17,8 @@
     prefix-icon="avatarMan"
     name="nom"
     placeholder="par exemple: Dupont"
-    validation="required | length:2,100 | alpha "
-    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton nom...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les noms sont généralement compris entre 2 et 100 caractères...'}"
+    validation="required | length:2,100 | alpha_spaces "
+    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton nom...', length:'Le nom doit contenir entre 2 et 100 caractères'}"
     />
     <FormKit 
     type="text"
@@ -27,7 +27,7 @@
     name="prénom"
     placeholder="par exemple: Jean"
     validation="required | alpha | length:2,100"
-    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton prénom...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', length:'Les prénoms sont généralement compris entre 2 et 100 caractères...'}"
+    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton prénom...',length:'Les prénoms sont généralement compris entre 2 et 100 caractères...'}"
     />
     <FormKit 
     type="email"
@@ -44,8 +44,8 @@
     
     name="message"
     placeholder="par exemple: Je vous contacte pour vous dire que votre site est super ! On le savait déjà mais c'est toujours bon à entendre !"
-    validation="required |alpha | lenght:2,1000"
-    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...', alpha:'Tu dois bien avoir un caractère bizarre quelque part...', lenght:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
+    validation="required | lenght:2,1000"
+    :validation-messages="{required:'Oups ! Je crois que tu as oublié ton message...',lenght:'Les messages efficaces sont généralement compris entre 2 et 1000 caractères...'}"
     />
     <button :disabled="state.loading" class="bouton">
       {{ state.loading ? "Envoi en cours..." : "Soumettre"}}

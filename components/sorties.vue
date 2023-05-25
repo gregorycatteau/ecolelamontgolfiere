@@ -36,21 +36,21 @@ export default defineComponent({
       sliderImages: [
         {
           id: 1,
-          src: '@/public/slider10.jpg',
+          src: '/slider10.jpg',
           name: 'slider10',
           type: 'image',
           required: true,
         },
         {
           id: 2,
-          src: '@/public/slider11.jpg',
+          src: '/slider11.jpg',
           name: 'slider11',
           type: 'image',
           required: true,
         },
         {
           id: 3,
-          src: '@/public/slider12.jpg',
+          src: '/slider12.jpg',
           name: 'slider12',
           type: 'image',
           required: true,

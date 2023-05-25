@@ -82,8 +82,11 @@
           prefix-icon="telephone"
           name="telephone"
           placeholder="par exemple: 06 12 34 56 78"
-          validation="required |matches:/^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/"
-          :validation-messages="{required:'Oups ! Je crois que tu as oublié ton numéro de téléphone...', number:'Il n\'\y a généralement pas de lettres dans un numéro de téléphone...',matches:'Ton numéro de téléphone ne semble pas valide...'}"
+          validation="required |matches:/^0[1-9](?:\d{2}){4}$/, 'Veuillez entrer un numéro de téléphone français valide')
+"
+          :validation-messages="{
+            required:'Oups ! Je crois que tu as oublié ton numéro de téléphone...', 
+            matches:'Ton numéro de téléphone ne semble pas valide...'}"
         />
         <FormKit
           Type="text"
@@ -109,10 +112,9 @@
           prefix-icon="avatarMan"
           name="datenaissance"
           placeholder="par exemple: 10/12/2017"
-          validation="required | date_format:DD/MM/YYYY |date_before:today "
-          :valdation-messages="{
+          validation="required | date_before"
+          :validation-messages="{
             required:'Oups ! Je crois que tu as oublié la date de naissance de ton enfant...',
-            date_format:'Il semble que la date ne soit pas correcte...',
             date_before:'Il n\'est pas possible de préinscrire les enfants par anticipation...'}"
         />
 
@@ -122,11 +124,10 @@
           prefix-icon="time"
           name="dateadmission"
           placeholder="par exemple: 10/09/2024"
-          validation="required | date_format:DD/MM/YYYY |date_after:today "
-          :valdation-messages="{
-            required:'Oups ! C\'est important de savoir quand tu souhaites que ton enfant intègre l\'école...', 
-            date_format:'Il semble que la date ne soit pas correcte...',   
-            date_after:'Il n\'est pas possible de préinscrire les enfants par anticipation...'}"
+          validation="required | date_after"
+          :validation-messages="{
+            required:'Oups ! C\'est important de savoir quand tu souhaites que ton enfant intègre l\'école...',
+            date_after:'La date d\'admission doit être supérieure à la date du jour...'}"
         />
 
         <FormKit 
@@ -167,7 +168,16 @@ const formData = ref({
 async function handleSubmit(data) {
   const { data: contact, error } = await supabase
   .from('table_pre_inscription')
-  .insert({ nom: data.nom, prénom: data.prénom, email: data.email, message: data.message })
+  .insert({ 
+    nom: data.nom, 
+    prénom: data.prénom, 
+    email: data.email, 
+    telephone: data.telephone, 
+    nomenfant: data.nomenfant, 
+    prenomenfant: data.prenomenfant, 
+    datenaissance: data.datenaissance, 
+    dateadmission: data.dateadmission, 
+    message: data.message })
   if (error) {
     console.log(error)
   } else {

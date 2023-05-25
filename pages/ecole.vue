@@ -2,7 +2,7 @@
     <div class="wrapperingall">
     <Separator></Separator>
     <div class="wrapperimg">
-      <img src="@/public/slider1.jpg" alt="notfound" class="imagefond"/>
+      <img src="/slider1.jpg" alt="notfound" class="imagefond"/>
     </div>
      <Separator></Separator>
     

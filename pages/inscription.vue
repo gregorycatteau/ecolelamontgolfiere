@@ -13,6 +13,7 @@
       </div>
       
     </div>
+   
     <Subscribe></Subscribe>
 </template>
 <script lang="ts">

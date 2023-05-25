@@ -12,7 +12,7 @@
         <h2 class="jenny">Gestion, organisation, etc</h2>
         <div class="imgwrapper">
           <img 
-          src="@/public/jenny-portrait.jpg" 
+          src="/jenny-portrait.jpg" 
           alt="notfound" 
           class="imagefond"
           />
@@ -78,7 +78,7 @@
         <h2 class="jenny">Représentation, Partenariats, etc</h2>
         <div class="imgwrapper">
           <img 
-            src="@/public/kate.jpg" 
+            src="/kate.jpg" 
             alt="notfound" 
             class="imagefond"
             width="900"
@@ -100,7 +100,7 @@
         <h2 class="jenny">webmaster, finances, etc</h2>
         <div class="imgwrapper">
           <img 
-            src="@/public/greg.jpg" 
+            src="/greg.jpg" 
             alt="notfound" 
             class="imagefond"
             width="900"
