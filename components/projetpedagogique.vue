@@ -1,23 +1,10 @@
 <template>
+  
   <div class="wrapper">
     <div>
-      <h1 class="maintitle">Notre projet pédagogique</h1>
+      <h1 class="maintitle">Notre aventure éducative</h1>
     </div>
-    <div class="columns">
-      <div class="column1">
-        <h1 class="title">Le Vivre Ensemble</h1>
-        <p class="text">Par vivre-ensemble nous entendons la coopération, la solidarité, le partage, la paix, ...
-
-Cet apprentissage du "vivre-ensemble" regroupe notamment les compétences psychosociales suivantes : écoute, confiance en soi, connaissance et respect de soi, respect de l'autre, empathie, capacité à coopérer, familiarisation à la gestion de conflits, recours à l'intelligence émotionnelle...
-
-Pour favoriser le développement de ces compétences, les pratiques se centrent autour du fonctionnement multi-âges, de l'auto-organisation, de la coopération, de l'accompagnement des émotions et de la conscience de soi.
-
-Ces pratiques se mettent notamment en place dans le cadre des règles de vie qui sont élaborées en concertation avec le groupe d'enfants et l'ensemble de la communauté pédagogique, sur des temps dédiés. Elles peuvent être amenées à évoluer en fonction des besoins rencontrés au quotidien.
-
-Elles ont pour but de proposer un cadre sécurisant et indispensable, à l'intérieur duquel chacun, enfant comme adulte, se sent libre d'agir et de penser dans le respect des autres.</p>
-      </div>
-      <div class="column2">
-        <div class="slider-container">
+    <div class="slider-container">
           <img
             v-for="(image, index) in sliderImages"
             :key="index"
@@ -27,7 +14,16 @@ Elles ont pour but de proposer un cadre sécurisant et indispensable, à l'inté
             :width="600"
             :height="400"
           />
-        </div>
+    </div>
+    <div class="columns">
+      <div class="column1">
+        <h1 class="title">Ensemble, nous grandissons</h1>
+        <p class="text">À La Montgolfière, nous croyons en la force du "vivre-ensemble". C'est une invitation à la coopération, à la solidarité, au partage et à la paix. Nous apprenons à être ensemble, à écouter, à avoir confiance en nous, à nous connaître et à respecter les autres.</p>
+        <p class="text">Pour développer ces compétences importantes, nous fonctionnons tous ensemble, quel que soit notre âge. Nous nous organisons, nous coopérons, nous apprenons à gérer nos émotions et à résoudre les conflits avec intelligence et bienveillance.</p>
+        <p class="text">Les règles de vie sont créées en collaboration avec les enfants et toute la communauté pédagogique. Elles sont adaptées et évoluent selon nos besoins quotidiens. Elles nous offrent un cadre sécurisant où chacun, enfant comme adulte, est libre d'agir et de penser dans le respect des autres.</p>
+      </div>
+      <div class="column2">
+        
       </div>
     </div>
   </div>
@@ -89,14 +85,21 @@ export default defineComponent({
 
 <style scoped>
 .wrapper {
-  @apply w-10/12 m-auto p-10 rounded-s-3xl rounded-e-full prose sm:prose sm:max-w-none sm:prose-lg lg:prose-lg bg-yellow-300;
+  @apply  bg-soutenu-charte-orange flex flex-col gap-10 rounded-tl-full;
 }
 .maintitle {
-  @apply text-4xl font-bold text-center;
+  @apply text-4xl font-bold text-center mt-32 p-10;
+}
+.slider-container {
+  @apply aspect-w-6 aspect-h-4 hover:saturate-200 mx-10 rounded-2xl shadow-2xl;
+}
+.slider-image {
+  @apply mx-auto object-cover rounded-2xl shadow-2xl;
 }
 
+
 .columns {
-  @apply sm:flex sm:flex-row sm:w-11/12 sm:m-auto;
+  @apply flex flex-row w-11/12 m-auto;
 }
 .column1 {
   @apply sm:w-2/3 sm:px-5 md:w-1/2;
@@ -105,23 +108,18 @@ export default defineComponent({
   @apply sm:w-1/3 sm:px-5 md:w-1/2;
 }
 .maintitle {
-  @apply text-4xl font-bold text-center text-red-600;
+  @apply text-4xl font-bold text-center text-soutenu-charte-cyan;
 }
 .title {
-  @apply text-2xl font-bold text-center text-red-700;
+  @apply text-2xl font-bold text-center text-soutenu-charte-bleu;
 }
 .text {
-  @apply text-xl text-center p-5 text-red-800;
+  @apply text-xl text-center p-5 text-soutenu-charte-bleu;
 }
 .textlist {
   @apply text-xl text-center p-5;
 }
-.slider-container {
-  @apply flex  aspect-w-16 aspect-h-9 mx-10 rounded-2xl sm:aspect-w-6 sm:aspect-h-4;
-}
-.slider-image {
-  @apply w-full mx-auto object-cover rounded-2xl shadow-2xl;
-}
+
 
 
 

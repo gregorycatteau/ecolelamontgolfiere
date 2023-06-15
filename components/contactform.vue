@@ -1,5 +1,5 @@
 <template>
-  <div class="container2">
+  reazfrazfrer<div class="container2">
     <h1 class="h1">Nous contacter</h1>
     <p>Vous pouvez nous contacter en utilisant le formulaire ci-dessous :</p>
     <br>
@@ -54,6 +54,7 @@
       {{ state.error }}</p>
     </template>
     </FormKit>
+    
   </div>
 </template>
 
@@ -77,8 +78,11 @@ async function handleSubmit(data) {
     formData.value.prénom = ''
     formData.value.email = ''
     formData.value.message = ''
+   
   }
 }
+
+ 
 </script>
 
 

@@ -4,3 +4,9 @@
     
   </div>
 </template>
+<script></script>
+<style scoped>
+.title {
+  @apply text-4xl font-['bimbo'];
+}
+</style>

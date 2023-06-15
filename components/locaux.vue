@@ -1,28 +1,8 @@
 <template>
   <div class="wrapper">
     <div>
-      <h1 class="title">Des locaux et un environnement matériel adaptés</h1>
-    </div>
-    <div class="columns">
-      <div class="column1">
-        
-        <p class="textlist">Les locaux que nous recherchons ne ressemblent pas à une école classique. La Montgolfière ressemblera à une grande maison, on y trouvera : </p>
-        <ul class="listwrap">
-          <li class="listitem">une salle très calme : on ne peut pas y parler, elle est utile pour travailler seul où se reposer</li>
-          <li class="listitem">une salle calme : on peut parler doucement, on peut ainsi y travailler à plusieurs</li>
-          <li class="listitem">un atelier : avec un accès à l’eau, qui permet de réaliser de nombres activités manuelles et créatives (dessin, peinture, poterie, couture…) et un espace d’expériences scientifiques</li>
-          <li class="listitem">une salle jeu : avec de nombreux jeux de construction (légos, kaplas…) et dinettes…</li>
-          <li class="listitem">une cuisine équipée</li>
-          <li class="listitem">un grand salon : avec canapés et tables pour manger ainsi qu’un babyfoot</li>
-          <li class="listitem">un petit salon : un espace cosy pour se poser, discuter, rêver, jouer…</li>
-          <li class="listitem">une salle musique et cinéma : réservable pour visionner un film à plusieurs, et où on peut également découvrir la musique grâce à un clavier, des guitares, une batterie…</li>
-          <li class="listitem">une médiathèque : on y trouve des ordinateurs, des livres et de nombreux jeux de société</li>
-          <li class="listitem">une salle de sport : avec un mur d’escalade, des haltères, des tapis de sol, des ballons…</li>
-        </ul>
-        <p class="textlist">L’aménagement des locaux, les ressources matérielles et humaines permettent l’alternance de phases de travail personnel et de phases collectives et concourent à une approche systémique des apprentissages.</p>
-      </div>
-      <div class="column2">
-        <div class="slider-container">
+      <h1 class="maintitle">Tout penser  pour grandir et s'épanouir</h1>
+      <div class="slider-container">
           <img
             v-for="(image, index) in sliderImages"
             :key="index"
@@ -33,10 +13,28 @@
             :height="400"
           />
         </div>
+    </div>
+    <div class="columns">
+      <div class="column1">
+        
+        <p class="textlist">Chez La Montgolfière, nous souhaitons créer un lieu magique où les apprentissages se font aussi en plein air, au contact de la nature. Imaginez un vaste jardin rempli de fleurs, d'arbres majestueux et d'animaux joyeux. Un endroit où vous pourriez explorer, jouer et apprendre en harmonie avec l'environnement.</p>
+        <p class="textlist">Notre école sera entourée d'une ferme éducative où vous pourrez découvrir la vie à la campagne, prendre soin des animaux et cultiver des fruits et légumes. Vous apprendrez l'importance du respect de la nature et comment vivre en harmonie avec notre belle planète.</p>
+        <p class="textlist">Les bâtiments de notre école seront conçus avec amour, en utilisant des matériaux sains et durables. Nous veillerons à minimiser notre empreinte écologique en privilégiant les énergies renouvelables. Chaque construction sera réversible, respectant ainsi la beauté et l'équilibre de notre environnement naturel.</p>
+        <p class="textlist">La Montgolfière sera un lieu ouvert, lumineux et aéré. Vous vous sentirez inspirés et élevés par l'énergie positive qui y règne. Chaque jour, vous pourrez grandir, explorer et développer vos talents dans un cadre bienveillant et stimulant.</p>
+        <p class="textlist">Nous avons une grande ambition : créer des espaces inspirants et du matériel adapté pour vous aider à réaliser vos rêves. Même si ce projet est encore en cours de réalisation, nous avons besoin de votre soutien pour le concrétiser. Rejoignez-nous et devenez acteur de cette belle aventure en cliquant sur le bouton ci-dessous.</p>
+        <div class="btn-formater">
+        <nuxt-link to="/rejoindre" class="button">Je veux participer</nuxt-link>
+        </div>
+
+      </div>
+      <div class="column2">
+        
       </div>
     </div>
   </div>
 </template>
+
+
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 
@@ -90,12 +88,21 @@ export default defineComponent({
 </script>
 <style scoped>
 .wrapper {
-  @apply w-10/12 m-auto p-10 rounded-s-3xl rounded-e-full prose sm:prose sm:max-w-none sm:prose-lg lg:prose-lg bg-blue-300;
+  @apply  bg-soutenu-charte-orange flex flex-col gap-10 rounded-tl-full;
+}
+.maintitle {
+  @apply text-4xl font-bold text-center mt-32 p-10;
+}
+.slider-container {
+  @apply aspect-w-6 aspect-h-4 hover:saturate-200 mx-10 rounded-2xl shadow-2xl;
+}
+.slider-image {
+  @apply mx-auto object-cover rounded-2xl shadow-2xl;
 }
 
 
 .columns {
-  @apply sm:flex sm:flex-row sm:w-11/12 sm:m-auto;
+  @apply flex flex-row w-11/12 m-auto;
 }
 .column1 {
   @apply sm:w-2/3 sm:px-5 md:w-1/2;
@@ -104,26 +111,24 @@ export default defineComponent({
   @apply sm:w-1/3 sm:px-5 md:w-1/2;
 }
 .maintitle {
-  @apply text-4xl font-bold text-start text-red-600;
+  @apply text-4xl font-bold text-center text-soutenu-charte-cyan;
 }
 .title {
-  @apply text-2xl font-bold text-start ml-10 text-red-700;
+  @apply text-2xl font-bold text-center text-soutenu-charte-bleu;
+}
+.text {
+  @apply text-xl text-center p-5 text-soutenu-charte-bleu;
 }
 .textlist {
-  @apply text-xl text-center  text-red-700;
+  @apply text-xl text-center p-5;
 }
-.listwrap {
-  @apply list-disc list-inside text-xl text-start  text-red-700;
+.btn-formater {
+  @apply flex flex-col justify-center items-center my-5 w-11/12 gap-4 mx-auto z-20 ;
 }
-.listitem {
-  @apply text-xl text-start  text-red-700;
+.button {
+  @apply text-2xl font-bold text-center text-soutenu-charte-bleu bg-pastel-charte-cyan p-5 items-center rounded-3xl shadow-2xl hover:bg-soutenu-charte-bleu hover:text-soutenu-charte-jaune;
 }
-.slider-container {
-  @apply flex  aspect-w-16 aspect-h-9 mx-10 my-48 rounded-2xl sm:aspect-w-6 sm:aspect-h-4;
-}
-.slider-image {
-  @apply w-full mx-auto object-cover rounded-2xl shadow-2xl;
-}
+
 
 
 

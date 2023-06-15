@@ -1,3 +1,3 @@
 <template>
- <div class="mb-5 mt-10"></div>
+ <div class="mb-1 mt-32"></div>
 </template>

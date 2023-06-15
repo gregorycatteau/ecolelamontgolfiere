@@ -238,7 +238,7 @@ async function handleSubmit(data) {
 }
 .form {
   @apply 
-  w-auto m-auto mt-10 mb-10 prose;
+  w-auto m-auto mt-10 mb-10;
 }
 
 

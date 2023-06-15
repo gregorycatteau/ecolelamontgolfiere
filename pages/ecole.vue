@@ -1,48 +1,58 @@
 <template>
-    <div class="wrapperingall">
-    <Separator></Separator>
-    <div class="wrapperimg">
-      <img src="/slider1.jpg" alt="notfound" class="imagefond"/>
+  <Separator></Separator>
+  <div class="wrapperingall">
+    <div class="hero">
+      <div class="imageandgeneral">
+        <div class="wrapperimg">
+          <img src="/slider1_2.jpg" alt="notfound" class="imagefond" />
+        </div>
+      </div>
+      <div class="wrapgen">
+        <Generalites></Generalites>
+      </div>
     </div>
-     <Separator></Separator>
-    
+    <Separator></Separator>
     <div class="suite">
-    <Generalites></Generalites>
-    <Separator></Separator>
-    <valeurs></valeurs>
-    <Separator></Separator>
-    <Projetpedagogique></Projetpedagogique>
-    <Separator></Separator>
-    <Environnement></Environnement>
-    <Separator></Separator>
-    <locaux></locaux>
-    <Separator></Separator>
-    <Sorties></Sorties>
-    <Separator></Separator>
-    <Faq></Faq>
-    <Separator></Separator>
-    <Togglingbutton></Togglingbutton>
-  
+      <Separator></Separator>
+      <valeurs></valeurs>
+      <Separator></Separator>
+      <Projetpedagogique></Projetpedagogique>
+      <Separator></Separator>
+      <Environnement></Environnement>
+      <Separator></Separator>
+      <locaux></locaux>
+      <Separator></Separator>
+      <Sorties></Sorties>
+      <Separator></Separator>
+      <Faq></Faq>
+      <Separator></Separator>
+      <Togglingbutton></Togglingbutton>
+    </div>
   </div>
-</div>
 </template>
 
 <style scoped>
-
 .wrapperingall {
-  @apply w-full h-full bg-white bg-cover bg-center bg-no-repeat;
+  @apply flex flex-col items-center justify-between w-8/12 m-auto;
+}
+
+.hero {
+  @apply relative flex flex-nowrap justify-center items-center ;
+}
+
+.imageandgeneral {
+  @apply w-full md:w-2/3;
 }
 
 .wrapperimg {
-  @apply w-11/12 m-auto aspect-w-16 aspect-h-9 ;
+  @apply relative  md:basis-2/3 top-10 left-10;
 }
 
 .imagefond {
-  @apply max-w-full h-auto object-cover z-10  rounded-b-full mt-10;
+  @apply object-cover rounded-3xl hover:saturate-200 md:basis-2/3;
 }
 
-
-.suite {
-  @apply mt-80;
+.wrapgen {
+  @apply relative w-full md:w-auto md:flex-1;
 }
 </style>

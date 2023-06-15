@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper"></div>
+ 
   <img 
-  src="@/public/slider3.jpg" 
+  src="@/slider3.jpg" 
   alt="notfound" 
   class="imagefond"
   height="400"
@@ -11,7 +12,7 @@
         <h1 class="title">Merci de votre intérêt pour l'école La Montgolfière</h1>
         <p class="subtitle">L'école où nous élevons ensemble</p>
       </div>
-      
+       
     </div>
    
     <Subscribe></Subscribe>

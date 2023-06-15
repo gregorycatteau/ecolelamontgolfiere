@@ -12,11 +12,30 @@ export default {
     'error.{js,ts,vue}',
     'content/**/*.md'
   ],
-  theme: {
+  theme: 
+  {
     extend: {
+     
+    
+  
+      colors: {
+        'pastel-charte-vert': '#c0faa0',
+        'pastel-charte-bleu': '#acb4fa',
+        'pastel-charte-jaune': '#faf894',
+        'pastel-charte-cyan': '#f97afa',
+        'pastel-charte-orange': '#fae187',
+        'soutenu-charte-vert' : '#8afa25',
+        'soutenu-charte-bleu' : '#3257FA',
+        'soutenu-charte-jaune' : '#faef19',
+        'soutenu-charte-cyan' : '#e100fa',
+        'soutenu-charte-orange' : '#fabe0c',
+      },
       backgroundImage: {
-        'hero-pattern': "url('/public/chalk2.jpeg')",
-        'redarea': "url('/public/redchalk.jpeg')",
+        'hero-pattern': "url('/chalk2.jpeg')",
+        'redarea': "url('/redchalk.jpeg')",
+        'child': "url('/illustration-4.jpg')",
+        'header': "url('/header-baby.png')",
+        'join': "url('/fond-rejoind.jpg')",
       },
       animation: {
         quality: 'quality-animation'

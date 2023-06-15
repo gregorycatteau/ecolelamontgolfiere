@@ -1,279 +1,266 @@
 <template>
-  <div class="wrapper">
-    <div>
-     <h1 class="title">L'équipe de la Montgolfière</h1>
+  <div class="mainwrapper">
+    <div class="team">
+      <h1 class="h1">L'équipe</h1>
+      <h2 class="p">Nous sommes une équipe de 3 personnes, passionnées par l'enseignement et la pédagogie.</h2>
+      <h2 class="p">Voici nos profils</h2>
     </div>
-    <div class="wrapguardians">
-      <h1 class="guardians">Du coté de l'administration</h1>
-    </div>
-    <div class="separation"></div>
-    <div class="columns">
-      <div class="column1">
-        <h2 class="jenny">Gestion, organisation, etc</h2>
-        <div class="imgwrapper">
-          <img 
-          src="/jenny-portrait.jpg" 
-          alt="notfound" 
-          class="imagefond"
-          />
-        </div>
-        <h1 class="undername">Jenny</h1>
-        <div class="mainskillwrapper">
-          <div class="skillwrapper">
-            <div class="wrapperdef">
-              <Icon name="medical-icon:i-nursery" class="icon"></Icon>
-              <h2 class="profession">Ancienne auxilliaire de puériculture </h2>
-            </div>
-            <div class="wrapperdef">
-              <Icon name="streamline:interface-hierarchy-3-node-organization-links-structure-link-nodes-network-hierarchy" class="icon"></Icon>
-              <h2 class="profession">Responsable de l'organisation</h2>
-            </div>
-           
-          </div>
-          <div class="maincontactwrapper">
-          <div class="contactwrapper">
-            <a href="mailto:Jenny@ecolelamontgolfiere.fr">
-            <Icon name="fluent:mail-16-regular" class="iconmail"></Icon></a>
-          </div>
-          <div class="contactwrapper">
-            <a href="tel:0617784649">
-            <Icon name="fluent:phone-16-regular" class="iconphone"></Icon></a>
-          </div>
-          <div class="contactwrapper">
-            <a href="https://www.telegram.me/Jenny_Catteau">
-            <Icon name="logos:telegram" class="icontelegram"></Icon></a>
-          </div>
-        </div>
-        
-      </div> 
-      <div class="try">
-          <button @click="showQuality">
-            
-            <h3 class="qualities" >Qualités</h3>
-          </button>
-          <transition name="quality-transition">
-            <div class="mainquality" v-if="showDiv">
-              <div class="wrapperqualityvisual">
-                <h4 class="skill1">Organisation</h4>
-                <div class="qualityvisual">
-                  <div class="qualityinternal" :class="{ 'qualityinternal-transition': animateQuality}"></div>
-                </div>
-          
-                <h4 class="skill2">Gestion</h4>
-                <div class="qualityvisual">
-                  <div class="qualityinternal" :class="{ 'qualityinternal-transition': animateQuality}"></div>
-                </div>
-                <h4 class="skill3">Communication</h4>
-                <div class="qualityvisual">
-                  <div class="qualityinternal" :class="{ 'qualityinternal-transition': animateQuality}"></div>
-                </div>
-              </div>
-            </div>
-          </transition>
-          
+    <div class="wrapperteam">
+      <div class="team-member">
+      <Jenny></Jenny>
+      </div>
+     
+      <div class="team-member">
+        <Kate></Kate>
       </div>
       
+      <div class="team-member">
+      <Greg></Greg>
       </div>
-      <div class="column2">
-        <h2 class="jenny">Représentation, Partenariats, etc</h2>
-        <div class="imgwrapper">
-          <img 
-            src="/kate.jpg" 
-            alt="notfound" 
-            class="imagefond"
-            width="900"
-            height="600"/>
-        </div>
-        <h1 class="undername">Kate</h1>
-        <div class="skillwrapper">
-          <div class="wrapperdef">
-           <Icon name="material-symbols:psychology-alt-sharp" class="icon"></Icon>
-           <h2 class="profession">Psychologue, hypnothérapeute </h2>
-          </div>
-          <div class="wrapperdef">
-           <Icon name="carbon:partnership" class="icon"></Icon>
-           <h2 class="profession">Développement, partenariat</h2>
-          </div>
-        </div>
-       </div>
-       <div class="column3">
-        <h2 class="jenny">webmaster, finances, etc</h2>
-        <div class="imgwrapper">
-          <img 
-            src="/greg.jpg" 
-            alt="notfound" 
-            class="imagefond"
-            width="900"
-            height="600"/>
-        </div>
-        <h1 class="undername">Greg</h1>
-        <div class="skillwrapper">
-          <div class="wrapperdef">
-           <Icon name="fluent-emoji-high-contrast:man-teacher" class="icon"></Icon>
-           <h2 class="profession">Formateur</h2>
-          </div>
-          <div class="wrapperdef">
-           <Icon name="streamline:programming-browser-build-build-website-development-window-code-programming-web-backend-browser-dev" class="icon"></Icon>
-           <h2 class="profession">Webmaster</h2>
-          </div>
-        </div>
-       </div>
-       
     </div>
   </div>
-  
+ <separator></separator>
+  <separator></separator>
+  <div class="litterature">
+    <h2 class="p">Notre projet n'en est quà ses débuts</h2>
+    <h2 class="p">Nous avons encore beaucoup de travail à accomplir avant de pouvoir ouvrir notre école.</h2>
+    <h2 class="p">La première étape est déjà franchie et nous nous sommes constitués en association.</h2>
+    <h2 class="p">Tu peux d'ailleurs consulter nos <span><NuxtLink to="/statuts_asso_lamontgolfiere" class="linker"> statuts</NuxtLink></span></h2>
+    <h2 class="p">Nous avons donc rédigé <span><NuxtLink to="/projetpedagogique" class="linker"> un projet pédagogique </NuxtLink> </span>qui nous permettra de nous présenter à nos futurs partenaires.</h2>
+    <h2 class="p">Une étape importante de notre développement va consister à recruter notre futur(e) directeur(trice).</h2>
+    
+  </div>
+  <separator></separator>
+  <div class="recrutement">
+    <h1 class="h1">Nous recherchons donc activement :</h1>
+    <h2 class="p">notre responsable pédagogique</h2>
+    <h2 class="question">Prêt(e) à relever le défi ?</h2>
+    <nuxt-link to="fiche_de_poste" class="recruit">Découvres d'abord le profil de poste</nuxt-link>
+  </div>
+  <separator></separator>
+  <div class="managetitleandimage">
+    <div class="managetitle">
+      <h2 class="p2">Et comprends bien que pour nous : </h2>
+      <h2 class="fixedtitle">Peu importe que tu sois :</h2>
+      <div class="movingtitle">
+        <titremanager></titremanager>
+      </div>
+    </div>
+    <div class="manageimage">
+      <imagemanager></imagemanager>
+    </div>
+  </div>
+  <div class="qualitydev">
+    <div class="insidequalitydev">
+    <h2 class="p">Ce qui compte pour nous, c'est que tu aies le profil suivant : </h2>
+  <qualitymanager></qualitymanager>
+    </div>
+  </div>
+  <separator></separator>
+  <separator></separator>
 </template>
+
 <script>
+import Jenny from "/components/Jenny.vue";
+import Kate from "/components/Kate.vue";
+import Greg from "/components/Greg.vue";
+import separator from "/components/separator.vue";
+
+import titremanager from "/components/titremanager.vue";
+import imagemanager from "/components/imagemanager.vue";
+import qualitymanager from "/components/qualitymanager.vue";
 export default {
-  data() {
-    return {
-      showDiv: false,
-      animateQuality: false
-    }
+  components: {
+    Jenny,
+    Kate,
+    Greg,
+    separator,
+    titremanager,
+    imagemanager,
+    qualitymanager
   },
-  methods: {
-    showQuality() {
-      this.showDiv = !this.showDiv
-    },
-    onanimationend() {
-      this.animateQuality = false;
-    }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      const qualityElement = document.querySelector('.qualityinternal');
-      qualityElement.addEventListener('animationend', this.onanimationend);
-    });
-  },
-  beforeUnmount() {
-    const qualityElement = document.querySelector('.qualityinternal');
-    qualityElement.removeEventListener('animationend', this.onanimationend);
-  }
-}
+};
 </script>
+
 <style scoped>
-.wrapper {
-  @apply flex flex-col items-center justify-center;
+.mainwrapper {
+  @apply 
+  flex
+  flex-col
+  md:flex 
+  md:flex-col;
 }
-.title {
-  @apply text-4xl font-bold text-center text-gray-700 m-10 p-10;
+.team {
+  @apply 
+  flex 
+  flex-col 
+  items-center 
+  justify-center 
+  gap-4 
+  my-16;
 }
-.wrapguardians {
-  @apply flex flex-col items-center justify-center bg-purple-600 rounded-tl-full w-11/12 m-auto;
+.h1 {
+  @apply 
+  text-center 
+  text-4xl 
+  font-bold 
+  my-5
+  md:text-8xl ;
 }
-.guardians {
-  @apply text-4xl font-bold text-center text-slate-100 sm:text-7xl m-10 p-10;
+.p {
+  @apply  
+  m-auto 
+  text-center 
+  text-base 
+  font-bold 
+  mb-5
+  md:text-4xl ;
 }
-.separation {
-  @apply w-11/12 h-10
+.p2 {
+  @apply 
+  text-center 
+  text-2xl 
+  font-bold 
+  mb-5 
+  text-pastel-charte-bleu
+  md:text-4xl ;
+}
+.wrapperteam {
+  @apply  
+  w-10/12
+  flex
+  flex-col
+  m-auto
+  rounded-3xl
+  gap-10
+  p-5
+  md:w-12
+  md:flex-row
+  md:flex
+  md:flex-nowrap
+  md:items-center
+  md:justify-center
+  md:gap-4 ;
+}
+.team-member {
+  @apply 
+  md:basis-1/3
   ;
 }
-.columns {
-  @apply sm:flex sm:flex-row sm:w-11/12 sm:m-auto  gap-4;
-}
-.column1 {
-  @apply sm:w-1/2 sm:px-5 md:w-1/2 bg-red-500 rounded-tl-full flex flex-col;
-}
-.column2 {
-  @apply sm:w-1/2 sm:px-5 md:w-1/2 bg-blue-500 rounded-tl-full;
-}
-.column3 {
-  @apply sm:w-1/2 sm:px-5 md:w-1/2 bg-yellow-500 rounded-tl-full;
-}
-.jenny {
-  @apply text-2xl font-bold text-start  bg-green-500 rounded-tl-3xl rounded-br-3xl text-gray-700 m-10 p-10;
-}
-.undername {
-  @apply text-2xl font-bold text-center text-black m-10 p-10 bg-green-300 opacity-70 rounded-tl-3xl -mt-32 z-10;
-}
-.imgwrapper {
-  @apply w-auto h-auto object-cover aspect-w-16 aspect-h-9;
-}
-.imagefond {
-  @apply w-full h-full object-cover rounded-tl-full;
-}
-.mainskillwrapper {
-  @apply flex flex-row items-center justify-between;
-}
-.skillwrapper {
-  @apply flex flex-col items-center justify-center;
-}
-.wrapperdef {
-  @apply flex flex-row items-center justify-center gap-4 p-2;
-}
-.icon {
-  @apply w-10 h-10 text-gray-700;
-}
-.maincontactwrapper {
-  @apply flex flex-row items-center justify-center gap-4;
-}
-.contactwrapper {
-  @apply flex flex-row items-center justify-center bg-yellow-300 rounded-3xl p-5 shadow-2xl;
-}
-.iconmail {
-  @apply w-10 h-10 text-blue-700 hover:rotate-45 hover:border-2 hover:border-green-400 hover:opacity-70 hover:rounded-3xl;
-}
-.iconphone {
-  @apply w-10 h-10 text-blue-700 hover:rotate-45 hover:border-2 hover:border-green-400 hover:opacity-70 hover:rounded-3xl;
-}
-.icontelegram {
-  @apply w-10 h-10 text-blue-700 hover:rotate-45 hover:border-2 hover:border-green-400 hover:opacity-70 hover:rounded-3xl;
-}
-.try {
-  @apply flex flex-col;
-}
-.mainquality {
-  @apply flex flex-col items-center justify-between  m-10;
-}
-.wrapperqualityvisual {
-  @apply flex flex-col items-center justify-between;
-}
-.qualities {
-  @apply text-2xl font-bold text-center text-gray-700 p-10;
-}
-.skill1 {
-  @apply text-2xl font-bold text-start text-gray-700;
-}
-.skill2 {
-  @apply text-2xl font-bold text-start text-gray-700;
-}
-.skill3 {
-  @apply text-2xl font-bold text-start text-gray-700;
-}
-.qualityvisual {
-  @apply relative bg-gradient-to-r from-green-600 to-green-900 w-96 h-12 rounded-3xl m-10 border-2 ;
-}
 
-.qualityinternal {
-  @apply absolute bg-green-500 w-11/12 -top-48 h-10 rounded-3xl shadow-slate-700 drop-shadow-2xl;
-  transform: translateX(-50%);
-  left: 50%;
-  top: 50%;
+.question {
+  @apply 
+  text-center 
+  text-2xl 
+  font-bold 
+  mb-5
+  md:text-4xl ;
 }
-
-.qualityinternal-transition {
-  @apply animate-quality;
-  animation-duration: 1s;
+.recruit {
+  @apply 
+  text-base 
+  w-8/12 
+  m-auto 
+  flex 
+  items-center 
+  justify-center 
+  bg-soutenu-charte-orange 
+  text-soutenu-charte-bleu 
+  font-bold 
+  p-4 
+  rounded-full;
 }
-
-@keyframes quality-animation {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 91.666667%;
-  }
+.managetitleandimage {
+  @apply 
+  w-10/12 
+  m-auto 
+  flex 
+  flex-col 
+  md:flex 
+  md:flex-row 
+  items-center 
+  justify-between 
+  gap-4 
+  bg-soutenu-charte-bleu 
+  p-10 
+  rounded-3xl;
 }
-
-.quality-transition-enter-active,
-.quality-transition-leave-active {
-  transition: all 1s;
+.managetitle {
+  @apply 
+  flex 
+  flex-col 
+  items-center 
+  text-center;
 }
-
-.quality-transition-enter,
-.quality-transition-leave-to {
-  opacity: 0;
+.fixedtitle {
+  @apply 
+  text-3xl 
+  md:text-2xl 
+  font-bold 
+  text-center 
+  p-10;
 }
-
-
+.movingtitle {
+  @apply 
+  text-4xl 
+  font-bold 
+  text-center 
+  text-soutenu-charte-jaune  
+  p-10;
+}
+.manageimage {
+  @apply 
+  w-1/2;
+}
+.qualitydev {
+  @apply 
+  w-10/12 
+  mx-auto 
+  flex 
+  flex-col 
+  items-center 
+  justify-between 
+  my-16;
+}
+.insidequalitydev {
+  @apply 
+  gap-10 
+  flex 
+  flex-col 
+  items-center 
+  justify-between;
+}
+.litterature {
+  @apply 
+  w-11/12 
+  m-auto 
+  flex 
+  flex-col 
+  items-center 
+  justify-between 
+  gap-4 
+  bg-pastel-charte-jaune 
+  p-10 
+  rounded-3xl;
+}
+.recrutement {
+  @apply 
+  w-11/12 
+  m-auto 
+  flex 
+  flex-col 
+  items-center 
+  justify-between 
+  gap-4 
+  bg-pastel-charte-vert 
+  p-10 
+  rounded-3xl;
+}
+.linker {
+  @apply 
+  text-soutenu-charte-bleu 
+  cursor-pointer;
+}
 </style>
+
+

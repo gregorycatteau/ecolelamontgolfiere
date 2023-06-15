@@ -32,72 +32,81 @@ export default {
     return {
       faqList: [
         {
-          question: "Comment les enfants peuvent-ils apprendre sans contrainte ?",
-          answer: [
-            "Notre pédagogie repose sur une conviction qui devrait être une évidence, mais que deux siècles d’école traditionnelle ont fini par faire oublier : nous sommes tous des êtres naturellement apprenants !",
-            "Entre sa naissance et l’âge de trois ans, l’enfant acquiert une quantité exceptionnelle de savoirs et de compétences. Ainsi, il apprend à marcher, à manger, à échanger et partager avec les autres… D’ores et déjà, il s’insère dans le monde social et se dote des instruments qui lui permettront de vivre en société, et ce sans avoir besoin ni de programme, ni de professeur imposé, ni d’évaluation ! Au sein des écoles démocratiques, le postulat est qu’il n’y a pas de raison fondamentale que le processus d’apprentissage change de forme à partir de l’âge de 3 ans. Un enfant qui apprend à maîtriser la syntaxe et la conjugaison tout seul est tout à fait capable d’apprendre à lire, écrire, compter mais également à faire de la biologie, du théâtre ou du jardinage… sans activités imposées !",
-            "Dans notre école, les apprentissages se font ainsi de manière formelle (cours, ateliers, projets …) ou informelle (jeu, conversations, sorties, activités du quotidien …) ! ",
-            "Par ailleurs, les membres de l’école bénéficient de l’accompagnement d’une équipe pédagogique bienveillante et expérimentée, qui leur propose des temps d’apprentissage structurés leur permettant de progresser sur les savoirs fondamentaux. Ces temps seront également l’occasion de préparer des examens nationaux ou de bâtir des projets personnalisés. Non obligatoires, ces temps d’apprentissage s’inspirent des apports pédagogiques d’intellectuels aussi importants que Célestin Freinet, Paulo Freire ou encore Olivier Decroly.",
-            "En résumé, à l’Ecole Démocratique de Paris, les apprentissages sont auto-dirigés : les modalités de l’apprentissage (quoi, quand, comment, avec qui ?) sont fixées par l’apprenant.",
-            "Pour approfondir, nous vous invitons à visionner le film documentaire Être et Devenir et consulter notre page de Ressources à visionner et lire.",
-        ]
+            question: "Comment les enfants peuvent-ils apprendre sans contrainte ?",
+            answer: [
+              "Bonjour les amis ! Savez-vous que nous sommes tous des êtres naturellement apprenants ? Depuis notre naissance, nous avons déjà appris tellement de choses sans contrainte ! On a appris à marcher, à manger, à partager avec les autres... Et devinez quoi ? On peut continuer à apprendre de la même manière, sans avoir besoin de programme ou de professeur imposé ! À l'école La Montgolfière, on pense que les enfants peuvent choisir ce qu'ils veulent apprendre, quand ils le veulent et comment ils le veulent. On peut apprendre en jouant, en discutant, en faisant des sorties ou même en préparant des projets. Les apprentissages peuvent être formels ou informels, c'est-à-dire qu'on peut apprendre de différentes façons !",
+              "Et devinez quoi ? À l'école La Montgolfière, on a une équipe pédagogique super sympa qui est là pour nous accompagner dans nos apprentissages. Ils nous aident à progresser dans les savoirs fondamentaux et à préparer des examens si on le souhaite. Mais rappelez-vous, tout est basé sur notre propre choix et notre motivation ! On est libres de décider comment et quoi apprendre. C'est chouette, non ? Si vous voulez en savoir plus, vous pouvez regarder le film documentaire Être et Devenir et consulter notre page de ressources à lire et à visionner.",
+                    ]
         },
         {
-          question: "Mon enfant ne risque-t-il pas de passer à côté d’une infinité de savoirs ?",
-          answer: [
-            "L’honnêteté nous oblige à le dire : les enfants de l’École Démocratique de Paris passeront effectivement à côté d’une infinité de savoirs… mais au même titre que tous les autres enfants ! En revanche, nous n’opérons aucune hiérarchisation des savoirs et sommes convaincus que tous les domaines de connaissance se valent. Ainsi, un enfant qui souhaiterait passer ses journées à faire des mathématiques ne serait pas considéré comme plus intelligent qu’un autre qui préfèrerait s’adonner au jardinage ou au sport.",
-            "En revanche, les écoles traditionnelles établissent, dans la conception de leurs programmes, une distinction entre certaines choses qui « méritent » d’être apprises par les enfants, et d’autres non. Ils leur imposent donc des disciplines qu’ils n’ont pas choisies, ainsi qu’un rythme qui ne leur convient pas nécessairement. Dès lors, l’enfant n’a plus le choix qu’entre « prendre le pli » et devenir un bon élève, docile mais jamais sollicité dans les prises de décision concernant son avenir, ou s’engager sur la voie de l’échec scolaire.",
-            "Laisser l’enfant choisir lui permettra de se consacrer à ce qui le passionne réellement et d’acquérir une confiance en lui qui sera capitale au cours de sa vie.",
+            question: "Mon enfant ne risque-t-il pas de passer à côté d’une infinité de savoirs ?",
+            answer: [
+              "Salut les amis écolos ! Une question importante : est-ce que mon enfant risque de manquer plein de choses en choisissant ce type d'école ? Eh bien, la réponse est oui, mais ça concerne tous les enfants, pas seulement ceux de notre école ! La différence, c'est qu'on ne classe pas les savoirs en disant que certains sont plus importants que d'autres. Chez nous, tous les domaines de connaissance se valent ! Si un enfant adore les mathématiques, c'est génial ! Et s'il préfère le jardinage ou le sport, c'est tout aussi génial ! On respecte les choix de chacun.",
+              "Par contre, dans les écoles traditionnelles, ils décident pour nous ce qu'il faut apprendre et à quel rythme. Du coup, on n'a pas toujours le choix, et ça peut être difficile pour certains enfants. À l'école démocratique, on pense que c'est important de laisser chaque enfant choisir ce qui le passionne vraiment. Comme ça, on peut se consacrer à ce qui nous intéresse le plus et être vraiment motivé pour apprendre. Et ça, c'est super important pour réussir dans la vie !",
+                    ]
+        },
 
-        ]
-        },
         {
-          question: "Si mon enfant veut faire de l’espagnol, de la chimie ou des mathématiques, comment peut-il y arriver ?",
+  question: "Si je veux apprendre l'espagnol, la chimie ou les mathématiques, comment est-ce que je peux y arriver ?",
+  answer: [
+    "Pas de soucis ! Si tu décides toi-même de t'intéresser à un sujet, sans te sentir obligé par quelqu'un d'autre ou par la pression sociale, tu peux atteindre tes objectifs, c'est sûr comme 1+1=2 ! Tu pourras faire preuve d'une créativité incroyable pour y arriver, avec le soutien de l'équipe pédagogique qui aura plein d'idées à te proposer et qui pourra partager son expérience de la vie et des apprentissages.",
+    "En plus, tu pourras profiter de notre super environnement intérieur et extérieur, qui est vraiment trop cool et rempli de surprises. Nous sommes super chanceux d'être au 21e siècle, dans l'une des villes les plus géniales pour apprendre de nouvelles choses. Internet, les musées, les médiathèques, les ludothèques, les librairies... Il y a tellement de façons de trouver de l'information et de la connaissance !",
+    "Et bien sûr, tu pourras toujours compter sur les membres de l'équipe référente pour t'apporter des infos et répondre à tes questions. Et si tu as besoin, tu pourras même faire appel à des personnes extérieures super calées qui pourront t'aider de temps en temps pour apprendre encore plus.",
+    "Et devine quoi ? Tu pourras aussi te tourner vers tes copains et copines qui cherchent, eux aussi, à en savoir plus et à développer leurs compétences. Tu pourras échanger avec eux, les aider et avancer ensemble vers de nouveaux sommets du savoir !",
+    "Donc, tu vois, il n'y a pas qu'un seul chemin pour apprendre. À l'École Démocratique de Paris, on apprend tout en s'amusant et en suivant nos passions !",
+  ]
+},
+
+
+{
+  question: "Je veux passer un diplôme, est-ce que c'est possible ?",
+  answer: [
+    "Bien sûr ! Si tu as envie de passer un examen, tu en as totalement la possibilité. Mais tu sais quoi ? Il est super important que ce soit toi qui décide de le faire, parce que tu as vraiment envie d'apprendre !",
+    "Au début de l'année, l'équipe référente te donnera toutes les infos sur les dates et les modalités d'inscription aux examens comme le bac et le brevet des collèges. C'est trop cool, non ?",
+    "Pour te préparer à l'examen, tu seras le héros principal de ton apprentissage, comme pour toutes les autres activités à l'école. C'est l'occasion parfaite pour développer ton autonomie en organisant ton temps et ton travail pour atteindre ton objectif.",
+    "Et si jamais tu en as besoin, les membres de l'équipe et même des personnes ressources extérieures seront là pour te soutenir en partageant leurs connaissances ou en t'aidant à t'organiser.",
+    "Alors encourage-toi à suivre ton propre chemin et à persévérer dans la réalisation de tes objectifs. À l'École de la Montgolfière, chaque enfant peut aller aussi loin qu'il le souhaite !",
+  ]
+},
+
+
+      
+        {
+          question: "Comment puis-je être sûr(e) que je recevrai une super éducation, qui respecte la nature, favorise la solidarité et la paix, dans notre école ?",
           answer: [
-            "Dès lors qu’un enfant a décidé souverainement de s’intéresser à un sujet, et qu’il ne le fait pas pour faire plaisir à quelqu’un d’autre ou par pression sociale, il arrivera nécessairement à ses fins, en déployant des trésors d’ingéniosité s’il le faut. Par y arriver, il auront la possibilité d’être soutenus dans leur quête par l’équipe pédagogique, ses propositions ainsi que son expérience de la vie et des apprentissages.",
-            "Ils pourront également profiter de l’environnement intérieur et extérieur, extrêmement riche et diversifié. En effet, nous avons la chance d’être au 21ème siècle et d’être situés dans une des villes les plus dynamiques au monde sur le plan intellectuel. Internet, musées, médiathèques, ludothèques, librairies… Chez nous, les moyens d’accès à l’information et au savoir ne manquent pas !",
-            "Il pourra bien sûr s’appuyer sur les membres de l’équipe référente pour accéder aux informations et obtenir des réponses à ses éventuelles questions. Par ailleurs, il est tout à fait bienvenu de faire appel à des personnes ressources extérieures pouvant ponctuellement faciliter l’acquisition d’un savoir ou d’une compétence.",
-            "Enfin, il pourra également s’appuyer sur ses pairs, qui sont eux aussi en quête de savoirs et de compétences. Il pourra ainsi échanger avec eux, les aider, les soutenir, et ainsi progresser ensemble.",
-            "Ainsi, il n’y a pas un seul chemin pour apprendre. A l’Ecole Démocratique de Paris, les enfants apprennent à apprendre !",
-          ]
+         "Dans notre école, notre objectif principal est de t'offrir une éducation extraordinaire qui respecte la nature, encourage la solidarité et cultive la paix. Parce que nous croyons que chaque enfant mérite d'apprendre dans un environnement respectueux de notre belle planète, où l'apprentissage suit les rythmes naturels et où tout le monde est gentil et solidaire.",
+         "Nous avons des enseignants formidables qui incarnent ces valeurs dans leurs enseignements. Ils t'aideront à grandir et à apprendre de manière équilibrée et holistique. Ils te montreront comment prendre soin de notre terre, comment aider les autres et comment être un super-héros de la paix.",
+                   ]
+        },
+
+        {
+  question: "Comment pouvez-vous me garantir que je serai bien préparé(e) pour réussir à l'école et dans la vie, tout en respectant la nature, en étant solidaire et en promouvant la paix ?",
+  answer: [
+    "Dans notre école, nous te préparons de manière exceptionnelle pour réussir dans tous les domaines de ta vie, en respectant la nature, en étant solidaire et en propageant la paix autour de toi. Nous croyons que tu apprends mieux lorsque tu suis ton intuition, quand tu écoutes tes besoins et quand tu peux être toi-même dans un environnement bienveillant.",
+    "Nous utilisons des méthodes d'apprentissage spéciales, inspirées par des pionniers écologiques et humanistes comme Montessori et Freinet, pour que tu puisses développer toutes tes compétences tout en prenant soin de notre belle planète et en aidant les autres. Tu seras ainsi prêt(e) à briller à l'école et dans ta vie en faisant du bien autour de toi.",
+  ]
+},
+
+        {
+          question: "Comment l'école assure-t-elle la sécurité, le bien-être et le respect du vivant de mon enfant au quotidien ?",
+          answer: "La sécurité, le bien-être et le respect du vivant sont des valeurs fondamentales de notre école. Nous créons un environnement sûr, bienveillant et respectueux où chaque enfant est encouragé à développer une relation harmonieuse avec la nature et tous les êtres vivants. Nous sensibilisons les enfants à l'importance de préserver notre planète, nous intégrons des pratiques durables dans notre quotidien et nous favorisons le respect mutuel entre tous les membres de la communauté éducative.",
         },
         {
-          question: "Mon enfant veut passer un diplôme : est-ce possible ?",
-          answer: [
-            "Bien entendu ! Tout membre qui exprime le souhait de passer un examen peut le faire. Mais dans ce cas également, c’est de lui que doit émaner la volonté de passer l’examen en question : en effet, la motivation étant le moteur principal de l’apprentissage, il est nécessaire que le membre soit à l’initiative de cette démarche !",
-            "En début d’année, l’équipe référente a pour habitude d’informer les membres des dates et des modalités d’inscriptions aux examens (bac et brevet des collèges).",
-            "Ensuite pour la préparation de l’examen, comme pour n’importe quel apprentissage dans l’école, le membre en sera l’acteur principal ! L’occasion de progresser dans son autonomie pour organiser son temps et son travail pour atteindre son objectif. ",
-            "Si le membre en exprime le besoin, les membres de l’équipe, et éventuellement des personnes ressources extérieures, seront là pour épauler le membre, en partageant avec lui leurs connaissances ou en l’aidant à s’organiser dans son travail.",
-        ]
+          question: "Quelle est l'expérience des enseignants et du personnel encadrant pour promouvoir les valeurs de respect du vivant, de solidarité, d'harmonie et de paix auprès des enfants ?",
+          answer: "    Notre équipe éducative partage une conviction profonde envers les valeurs de respect du vivant, de solidarité, d'harmonie et de paix. Nos enseignants expérimentés sont formés pour incarner ces valeurs et les transmettre aux enfants à travers leur approche pédagogique. Ils favorisent l'empathie, la coopération, la résolution pacifique des conflits et l'engagement envers la préservation de la nature. Ils sont également sensibilisés aux enjeux environnementaux et sociaux actuels, ce qui leur permet d'inspirer les enfants à devenir des citoyens responsables et engagés.",
         },
         {
-          question: "Il est donc possible que mon enfant ne passe jamais son bac ? Je ne sais pas si je suis prêt … ",
-          answer: [
-            "Il  revient aux parents de se poser la question : êtes-vous prêts à faire  confiance à votre enfant pour prendre ses responsabilités sur sa propre  vie, ou faut-il le forcer à se préparer au Bac même s'il faut en venir à  la carotte et au bâton ? Notre prise de position est claire : nous faisons confiance au jeune pour impulser et persévérer dans la formation dont il a besoin pour être qui il souhaite être.", 
-            "Pour  une majorité des jeunes des écoles démocratiques, cela passe par le Bac  et le suivi d'une formation universitaire. Le livre the lives of Subdbury alumni (2005) est  un sondage de ce que sont devenus les centaines d'anciens de Sudbury-Valley. Parmi eux, 80% finissent par aller à l'université, et  obtiennent habituellement leur premier choix. Il y a aussi quelques  originalités, comme un créateur d'une société d'informatique qui s'est  consacré uniquement à la pêche jusqu'à ses 15 ans, un professeur de  mathématiques qui n'a pas suivi de leçons de maths jusqu'à son entrée à  l'université, et plus récemment Laura Poitras et son Oscar décerné pour Citizenfour, le documentaire sur Snowden.",
-                      ]
+          question: "Comment les problèmes de discipline ou de comportement sont-ils gérés dans cette école, en prenant en compte les valeurs de respect du vivant, de solidarité, d'harmonie et de paix ?",
+          answer: " Dans notre école, nous privilégions une approche respectueuse et bienveillante pour gérer les problèmes de discipline ou de comportement. Nous encourageons les enfants à résoudre les conflits de manière pacifique, en favorisant la communication non violente et le respect mutuel. Notre objectif est de cultiver un climat harmonieux où chaque enfant se sent écouté, compris et respecté dans sa singularité, tout en étant conscient de l'impact de ses actions sur les autres et sur le vivant qui l'entoure.",
+        },
+        { question: "Comment l'école encourage-t-elle la solidarité, l'harmonie et la paix parmi les enfants ?",
+          answer: "Notre équipe éducative partage une conviction profonde envers les valeurs de respect du vivant, de solidarité, d'harmonie et de paix. Nos enseignants expérimentés sont formés pour incarner ces valeurs et les transmettre aux enfants à travers leur approche pédagogique. Ils favorisent l'empathie, la coopération, la résolution pacifique des conflits et l'engagement envers la préservation de la nature. Ils sont également sensibilisés aux enjeux environnementaux et sociaux actuels, ce qui leur permet d'inspirer les enfants à devenir des citoyens responsables et engagés.",
         },
         {
-          question: "Question 3",
-          answer: "Réponse 3",
+          question: "Comment l'école assure-t-elle la sécurité, le bien-être et le respect du vivant de mon enfant au quotidien ?",
+          answer: "La  solidarité, l'harmonie et la paix sont des valeurs que nous cultivons activement dans notre école. Nous encourageons les enfants à coopérer, à travailler ensemble sur des projets communs et à développer un esprit de solidarité envers leurs camarades et envers la nature. Nous favorisons également la résolution pacifique des conflits, en offrant aux enfants des outils et des compétences pour communiquer efficacement, exprimer leurs besoins et trouver des solutions respectueuses de tous. Par le biais d'activités, de discussions et de moments de réflexion, nous éveillons la conscience des enfants à la beauté de l'harmonie et à l'importance de la paix dans leurs interactions quotidiennes.",
         },
-        {
-          question: "Question 3",
-          answer: "Réponse 3",
-        },
-        {
-          question: "Question 3",
-          answer: "Réponse 3",
-        },
-        {
-          question: "Question 3",
-          answer: "Réponse 3",
-        },
-        {
-          question: "Question 3",
-          answer: "Réponse 3",
-        },
-      ],
+        ],
       isOpen: [],
     };
   },
@@ -118,25 +127,25 @@ export default {
   @apply text-4xl font-bold text-center;
 }
 .wrapper {
-  @apply relative mt-10 flex flex-col bg-purple-900 w-10/12 mx-auto cursor-pointer rounded-2xl;
+  @apply relative mt-10 flex flex-col bg-soutenu-charte-cyan w-11/12 mx-auto cursor-pointer rounded-2xl;
 }
 .wrapperint {
   @apply relative mt-10;
 }
 .question {
-  @apply text-xl font-bold mt-0 mb-6 text-left text-slate-50;
+  @apply text-xl font-bold mt-0 mb-6 text-center text-pastel-charte-jaune bg-soutenu-charte-cyan p-5 rounded-2xl shadow-2xl;
 }
 .question2 {
-  @apply text-2xl font-bold mt-0 mb-6 text-left ml-10;
+  @apply text-2xl font-bold mt-0 mb-6 text-center ml-10;
 }
 .blocquestion {
-  @apply flex justify-between;
+  @apply flex flex-row gap-10;
 }
 .iconwrapper {
   @apply flex justify-center items-center;
 }
 .icon {
-  @apply text-6xl text-slate-50 mr-10;
+  @apply text-3xl text-pastel-charte-jaune mr-10;
 }
 .answerwrap {
   @apply relative mt-10 p-10;

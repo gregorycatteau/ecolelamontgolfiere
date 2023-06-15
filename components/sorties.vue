@@ -1,17 +1,8 @@
 <template>
   <div class="wrapper">
     <div>
-    <h1 class="title">Des sorties variées</h1>
-    </div>
-       <div class="columns">
-      <div class="column1">
-          <p class="text">Les murs de cette école sont perméables, car l'on y vit aussi bien en dedans qu'au dehors. </p>
-          <h1 class="title">A chaque âge ses sorties</h1>
-          <p class="text">Souvent, une sortie initiée par un ou quelques membres est proposée à l’ensemble du collectif. Nous sortons ainsi très régulièrement, que ce soit simplement pour jouer à l’air libre dans les parcs alentours, sur un terrain de sport, à la piscine, à la patinoire, pour jardiner au jardin partagé, pour visiter un musée…</p>
-        
-    </div>
-      <div class="column2">
-        <div class="slider-container">
+      <h1 class="maintitle">Des sorties pleines de découvertes</h1>
+      <div class="slider-container">
           <img
             v-for="(image, index) in sliderImages"
             :key="index"
@@ -22,10 +13,20 @@
             :height="400"
           />
         </div>
+    </div>
+    <div class="columns">
+      <div class="column1">
+        <p class="text">Les murs de notre école sont ouverts sur le monde, car nous vivons à la fois à l'intérieur et à l'extérieur. Nous aimons explorer et découvrir tout ce qui nous entoure.</p>
+        <h1 class="title">Des sorties adaptées à chaque âge</h1>
+        <p class="text">Souvent, l'un ou plusieurs membres proposent une sortie à l'ensemble du groupe. Nous sortons régulièrement pour jouer en plein air dans les parcs, sur les terrains de sport, à la piscine, à la patinoire, pour jardiner dans un jardin partagé, ou encore pour visiter un musée. Chaque sortie est une occasion de s'amuser, d'apprendre et d'élargir nos horizons.</p>
+      </div>
+      <div class="column2">
+        
       </div>
     </div>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 
@@ -82,14 +83,21 @@ export default defineComponent({
 </script>
 <style scoped>
 .wrapper {
-  @apply w-10/12 m-auto p-10 rounded-s-full rounded-e-3xl prose sm:prose sm:max-w-none sm:prose-lg lg:prose-lg bg-indigo-800;
+  @apply  bg-soutenu-charte-orange flex flex-col gap-10 rounded-tl-full;
 }
 .maintitle {
-  @apply text-4xl font-bold text-center;
+  @apply text-4xl font-bold text-center mt-32 p-10;
+}
+.slider-container {
+  @apply aspect-w-6 aspect-h-4 hover:saturate-200 mx-10 rounded-2xl shadow-2xl;
+}
+.slider-image {
+  @apply mx-auto object-cover rounded-2xl shadow-2xl;
 }
 
+
 .columns {
-  @apply sm:flex sm:flex-row sm:w-11/12 sm:m-auto;
+  @apply flex flex-row w-11/12 m-auto;
 }
 .column1 {
   @apply sm:w-2/3 sm:px-5 md:w-1/2;
@@ -98,23 +106,22 @@ export default defineComponent({
   @apply sm:w-1/3 sm:px-5 md:w-1/2;
 }
 .maintitle {
-  @apply text-4xl font-bold text-center text-slate-100;
+  @apply text-4xl font-bold text-center text-soutenu-charte-cyan;
 }
 .title {
-  @apply text-2xl font-bold text-center text-slate-100;
+  @apply text-2xl font-bold text-center text-soutenu-charte-bleu;
 }
 .text {
-  @apply text-xl text-center p-5 text-slate-100;
+  @apply text-xl text-center p-5 text-soutenu-charte-bleu;
 }
 .textlist {
   @apply text-xl text-center p-5;
 }
-.slider-container {
-  @apply flex  aspect-w-16 aspect-h-9 mx-10 rounded-2xl sm:aspect-w-6 sm:aspect-h-4;
-}
-.slider-image {
-  @apply w-full mx-auto object-cover rounded-2xl shadow-2xl;
-}
+
+
+
+
+
 </style>
 ```
 

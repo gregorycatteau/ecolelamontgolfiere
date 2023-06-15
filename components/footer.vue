@@ -14,8 +14,13 @@
           </li>
         </ul>
       </nav>
+     
       <slot />
-    </div>
+    </div> 
+    <a href="https://www.facebook.com/profile.php?id=100093315811712">
+      <Icon name="logos:facebook" class="icon" />
+    </a>
+    
   </div>
 </template>
 
@@ -39,7 +44,7 @@ export default {
 
 <style scoped>
 .footing {
-  @apply bg-indigo-200;
+  @apply bg-indigo-200 flex flex-row justify-between;
 }
 .dark {
   @apply bg-gray-800 text-gray-100;
@@ -52,5 +57,11 @@ export default {
 }
 .li {
   @apply mr-6;
+}
+.link {
+  @apply text-indigo-800;
+}
+.icon {
+  @apply text-4xl pt-2 mr-10 mt-2;
 }
 </style>

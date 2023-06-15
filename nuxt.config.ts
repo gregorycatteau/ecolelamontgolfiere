@@ -14,8 +14,13 @@ export default defineNuxtConfig({
     '@formkit/nuxt', 
     'nuxt-icon', 
     '@nuxtjs/supabase',
+    '@nuxt/devtools',
     
   ],
+  devtools: {
+    enabled: true,
+    vscode: {}
+  }
     
   
 
