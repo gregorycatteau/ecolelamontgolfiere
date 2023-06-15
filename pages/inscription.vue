@@ -2,7 +2,7 @@
   <div class="wrapper"></div>
  
   <img 
-  src="@/slider3.jpg" 
+  src="/slider3.jpg" 
   alt="notfound" 
   class="imagefond"
   height="400"
