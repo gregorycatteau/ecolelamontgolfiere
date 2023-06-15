@@ -1,5 +1,5 @@
 <template>
-  reazfrazfrer<div class="container2">
+  <div class="container2">
     <h1 class="h1">Nous contacter</h1>
     <p>Vous pouvez nous contacter en utilisant le formulaire ci-dessous :</p>
     <br>
