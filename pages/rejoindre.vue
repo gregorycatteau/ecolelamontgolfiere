@@ -46,16 +46,16 @@ export default {
 </script>
 <style scoped>
 .mainwrap {
-  @apply bg-join bg-no-repeat bg-cover bg-center h-screen w-full;
+  @apply bg-join bg-no-repeat bg-cover bg-center;
 }
 .title {
   @apply text-4xl font-bold text-center;
 }
 .wrapper {
-  @apply w-full m-auto items-center flex flex-col justify-center p-10 my-10;
+  @apply m-auto items-center flex flex-col justify-center p-10 my-10;
 }
 .subwrapper {
-  @apply w-3/4 m-auto items-center flex flex-col justify-center p-10 my-10;
+  @apply m-auto items-center flex flex-col justify-center p-10 my-10;
 }
 .text {
   @apply text-lg font-bold text-center my-10;

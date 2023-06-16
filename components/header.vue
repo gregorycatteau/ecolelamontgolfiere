@@ -179,7 +179,7 @@ export default {
   shadow-2xl 
   rounded-full 
   
-  hover:bg-pastel-charte-vert
+  hover:bg-soutenu-charte-vert
   hover:border-none
   hover:text-soutenu-charte-cyan
   hover:font-bold

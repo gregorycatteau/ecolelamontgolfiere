@@ -15,20 +15,32 @@ export default {
   theme: 
   {
     extend: {
-     
+     fontFamily: {
+        'bimbopro': ['Bimbo-pro', 'sans-serif'],
+        'bimboballpoint': ['Bimbo-pro-ballpoint', 'sans-serif'],
+        'bimbojumbo': ['Bimbo-pro-dripping-jumbo', 'sans-serif'],
+        'bimbofinetip': ['Bimbo-pro-finetip', 'sans-serif'],
+        'bimbosharpie': ['Bimbo-pro-sharpie', 'sans-serif'],
+        'bimbowhiteboard': ['Bimbo-pro-whiteboard', 'sans-serif'],
+        'Pauline': ['Pauline-script', 'sans-serif'],
+        'Titre': ['hwt-artz', 'sans-serif'],
+        'Textes': ['vista-sans', 'sans-serif'],
+        'Soustitre': ['arno-pro', 'sans-serif'],
+     },
+
     
   
       colors: {
-        'pastel-charte-vert': '#c0faa0',
-        'pastel-charte-bleu': '#acb4fa',
-        'pastel-charte-jaune': '#faf894',
-        'pastel-charte-cyan': '#f97afa',
-        'pastel-charte-orange': '#fae187',
-        'soutenu-charte-vert' : '#8afa25',
-        'soutenu-charte-bleu' : '#3257FA',
-        'soutenu-charte-jaune' : '#faef19',
+        'pastel-charte-vert': '#9efe76',
+        'pastel-charte-bleu': '#84a4d9',
+        'pastel-charte-jaune': '#dae979',
+        'pastel-charte-cyan': '#a4ecee',
+        'pastel-charte-orange': '#dfa06e',
+        'soutenu-charte-vert' : '#51eb17',
+        'soutenu-charte-bleu' : '#2a37e5',
+        'soutenu-charte-jaune' : '#d8eb5b',
         'soutenu-charte-cyan' : '#e100fa',
-        'soutenu-charte-orange' : '#fabe0c',
+        'soutenu-charte-orange' : '#e88532',
       },
       backgroundImage: {
         'hero-pattern': "url('/chalk2.jpeg')",

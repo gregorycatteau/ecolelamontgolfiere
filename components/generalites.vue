@@ -31,7 +31,8 @@
   
   first-letter:float-left 
   md:first-letter:float-none
-  md:first-letter:text-pastel-charte-jaune
+first-letter:text-pastel-charte-jaune
+  md:font-Titre
   text-5xl font-bold 
   text-center 
   mb-10 
@@ -42,10 +43,10 @@
   shadow-2xl;
 }
 .suite {
-  @apply text-4xl text-justify text-soutenu-charte-cyan font-bold;
+  @apply text-4xl text-justify text-pastel-charte-cyan font-Soustitre font-bold;
 }
 .text {
-  @apply text-4xl text-center text-soutenu-charte-bleu bg-pastel-charte-bleu p-5 rounded-3xl shadow-2xl;
+  @apply text-4xl text-center font-Textes text-soutenu-charte-bleu bg-pastel-charte-bleu p-5 rounded-3xl shadow-2xl;
 }
 .texte {
   @apply text-5xl font-bold text-center text-soutenu-charte-cyan;

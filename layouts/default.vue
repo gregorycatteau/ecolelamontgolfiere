@@ -8,7 +8,7 @@
         
       </main>
     </div>
-    <Footing/>
+    <Footing class="footing"/>
   </div>
 </template>
 
@@ -29,12 +29,15 @@ export default {
 <style scoped>
 
 .extwrapper {
-  @apply flex flex-col items-center justify-between w-full h-full bg-pastel-charte-bleu md:bg-cover md:bg-center;
+  @apply flex flex-col items-center justify-between  bg-pastel-charte-bleu md:bg-cover md:bg-center;
 }
 .intwrapper {
   @apply flex;
 }
 .header {
+  @apply relative;
+}
+.footing {
   @apply relative;
 }
 .main-content {

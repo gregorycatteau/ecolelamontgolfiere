@@ -1,27 +1,30 @@
 <template>
- <div class="footing">
-    <div :class="{ dark: isDark }">
-      <nav class="nav">
-        <ul class="ul">
-          <li class="li">
-            <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
-          </li>
-          <li class="li">
-          <nuxt-link to="/ressources" class="link">Ressources</nuxt-link>
-          </li>
-          <li class="li">
-            <nuxt-link to="/contact" class="link">Contact</nuxt-link>
-          </li>
-        </ul>
-      </nav>
-     
-      <slot />
-    </div> 
-    <a href="https://www.facebook.com/profile.php?id=100093315811712">
-      <Icon name="logos:facebook" class="icon" />
-    </a>
-    
-  </div>
+  <footer>
+    <div class="footing">
+      <div :class="{ dark: isDark }" class="wrapper">
+        <nav class="nav">
+          <ul class="ul">
+            <li class="li">
+              <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
+            </li>
+            <li class="li">
+              <nuxt-link to="/ressources" class="link">Ressources</nuxt-link>
+            </li>
+            <li class="li">
+             <nuxt-link to="/contact" class="link">Contact</nuxt-link>
+            </li>
+          </ul>
+         </nav>
+          <a href="https://www.facebook.com/profile.php?id=100093315811712">
+            <Icon name="logos:facebook" class="icon" />
+          </a>
+      </div> 
+    </div>
+  </footer>
+   
+   
+   
+ 
 </template>
 
 <script lang="ts">
@@ -44,16 +47,19 @@ export default {
 
 <style scoped>
 .footing {
-  @apply bg-indigo-200 flex flex-row justify-between;
+  @apply bg-soutenu-charte-bleu flex flex-row min-w-full;
+}
+.wrapper {
+  @apply flex flex-row justify-center items-center py-4 px-6;
 }
 .dark {
   @apply bg-gray-800 text-gray-100;
 }
 .nav {
-  @apply flex justify-between items-center py-4 px-6;
+  @apply flex flex-row justify-between items-center;
 }
 .ul {
-  @apply flex list-none m-0 p-0;
+  @apply flex list-none;
 }
 .li {
   @apply mr-6;
@@ -62,6 +68,6 @@ export default {
   @apply text-indigo-800;
 }
 .icon {
-  @apply text-4xl pt-2 mr-10 mt-2;
+  @apply justify-end text-4xl pt-2 mr-10 mt-2;
 }
 </style>
