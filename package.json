@@ -35,7 +35,7 @@
   "dependencies": {
     "@formkit/nuxt": "^0.16.4",
     "@netlify/functions": "^1.6.0",
-    "@pinia/nuxt": "^0.4.3",
+    "@pinia/nuxt": "^0.4.11",
     "@sendgrid/mail": "^7.7.0",
     "@supabase/gotrue-js": "^2.24.0",
     "@supabase/supabase-js": "^2.21.0",
