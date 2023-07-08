@@ -40,7 +40,7 @@
     "@supabase/gotrue-js": "^2.24.0",
     "@supabase/supabase-js": "^2.21.0",
     "dotenv": "^16.0.3",
-    "netlify-cli": "^15.1.1",
+    "netlify-cli": "^15.8.1",
     "node-fetch": "^3.3.1",
     "vite": "^4.2.1"
   }
